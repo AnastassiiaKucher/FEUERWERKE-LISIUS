@@ -1,0 +1,220 @@
+/* ===== ОСНОВНОЕ ===== */
+body {
+  background-color: #141416;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Общий box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+/* ===== НАВИГАЦИЯ ===== */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141416;
+  z-index: 10;
+}
+
+.first {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.lis {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.item {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 350;
+  transition: color 0.3s ease;
+}
+
+.item:hover,
+.nav a.active {
+  color: #fdc367;
+}
+
+
+.lis {
+  width: 80%;
+  max-width: 180px;
+}
+
+.first {
+  margin-right: auto;
+}
+
+/* ===== ОСНОВНАЯ ОБЛАСТЬ (форма + инфо) ===== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 60px;
+  padding: 60px 20px 100px;
+  box-sizing: border-box;
+}
+
+/* ===== ФОРМА КОНТАКТОВ ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(253, 195, 103, 0.2);
+}
+
+.contact-form h2 {
+  color: #fec260;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ===== ГРУППЫ ПОЛЕЙ ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 22px;
+  color: #fdc367;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #fdc367;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #fec260;
+  box-shadow: 0 0 10px rgba(254, 194, 96, 0.3);
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* ===== ЧЕКБОКС ===== */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  color: #f5f5f5;
+}
+
+.checkbox-group input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+.checkbox-group a {
+  color: #fdc367;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+/* ===== КНОПКА ===== */
+.submit-btn {
+  background-color: #fdc367;
+  border: none;
+  color: #141416;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 14px 0;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.submit-btn:hover {
+  background-color: #ffe9b3;
+  transform: translateY(-2px);
+}
+
+/* ===== КОНТАКТНАЯ ИНФОРМАЦИЯ ===== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  max-width: 600px;
+  font-size: 22px;
+}
+
+.contact-info h2 {
+  color: #fec260;
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.contact-info a {
+  color: #fdc367;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: white;
+}

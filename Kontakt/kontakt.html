@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAKT</title>
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <nav class="nav">
+        <a class="item first" href="../index.html"> <img class="lis" src="lisius.PNG" alt="lisius"></a>
+        <a class="item toptop" href="../index.html">start</a>
+        <a class="item toptop" href="../uberUns/uberuns.html">über uns</a>
+        <a class="item toptop" href="../blog/blog.html">Blog</a>
+        <a class="item toptop" href="../referenzen/referenzen.html">Referenzen</a>
+        <a class="item toptop active" href="kontakt.html">kontakt</a>
+        
+        
+    </nav>
+
+<form action="https://formspree.io/f/mrbyzbwz" method="POST" class="contact-form">
+
+<h2 class="fonty">Kontaktformular</h2>
+
+<div class="form-group fonty">
+    <label for="name ">Name</label>
+    <input type="text" id="name" name="name" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="adresse ">Anschrift (Straße + Hausnummer, PLZ, Ort)</label>
+    <input type="text" id="adresse" name="adresse" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="phone ">Telefonnummer</label>
+    <input type="tel" id="phone" name="phone" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="email ">E-Mail</label>
+    <input type="email" id="email" name="_replyto" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="abbrennort ">Abbrennort</label>
+    <input type="text" id="abbrennort" name="abbrennort" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="budget ">Budget</label>
+    <input type="text" id="budget" name="budget" required>
+</div>
+
+<div class="form-group fonty">
+    <label for="wuensche ">Wünsche (laut/leise, ohne Musik, musikbegleitend, musiksynchron)</label>
+    <textarea id="wuensche" name="wuensche" rows="3"></textarea>
+</div>
+
+<div class="checkbox-group fonty">
+    <input type="checkbox" id="privacy" name="privacy" required>
+    <label for="privacy">Ich habe die <a href="#">Datenschutzbestimmungen</a> gelesen.</label>
+</div>
+
+<button type="submit" class="submit-btn fonty">Anfrage abschicken</button>
+</form>
+
+<!-- Normale Kontaktdaten -->
+<div class="contact-info fonty">
+<h2>Kontaktdaten</h2>
+<p><strong>E-Mail:</strong> info@beispiel.de</p>
+<p><strong>Telefon:</strong> +49 123 456789</p>
+<p><strong>YouTube:</strong> <a href="#">Unser Kanal</a></p>
+<p><strong>Instagram:</strong> <a href="#">@unserprofil</a></p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
