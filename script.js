@@ -1,3 +1,21 @@
+window.addEventListener('load', function () {
+  const video = document.getElementById('myVideo');
+  if (!video) return;
+
+  // На всякий случай ещё раз делаем его беззвучным
+  video.muted = true;
+
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(err => {
+      console.log('Autoplay wurde blockiert:', err);
+      // здесь потом можно показать кнопку "Play" поверх видео
+    });
+  }
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let button = document.querySelector(".btn");
 
