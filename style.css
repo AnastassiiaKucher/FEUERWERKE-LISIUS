@@ -811,6 +811,9 @@ html, body {
     margin-top: 12px;
     margin-bottom: 0;
   }
+   #video-container{
+    height: 60vh;
+  }
 
   /* ===== СЕКЦИЯ "Warum Feuerwerke Lisius?" ===== */
   .section-below {
