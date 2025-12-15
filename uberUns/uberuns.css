@@ -116,13 +116,400 @@ body {
   margin: 0;
 }
 
+
 /* ===== ФУТЕР ===== */
 .footer {
   display: flex;
+  flex-direction: column;
+  background-color: #1a1a1d;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 40px 10vw;
+  box-sizing: border-box;
+  gap: 25px;
+}
+
+/* ===== Верхняя часть ===== */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column h3 {
+  margin: 0;
+  color: #fdc367;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-column p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fdc367;
+}
+
+/* ===== Разделительная линия ===== */
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+  margin: 10px 0;
+}
+
+/* ===== Нижняя часть ===== */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+
+/* Соцсети */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #fdc367;
+}
+
+/* Ссылки */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fdc367;
+  text-decoration: underline;
+}
+
+/* Лого */
+.footer-logo {
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a1a1d;
-  color: #f5f5f5;
-  padding: 30px 0;
-  font-size: 18px;
 }
+
+.footer-logo img {
+  height: 8vh;
+  max-height: 80px;
+  width: auto;
+}
+
+/* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
+.nav a:hover {
+  color: #fdc367;
+}
+
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media (max-width: 900px) {
+  /* Навигация */
+  .nav {
+    padding: 10px 16px;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .lis {
+    width: 110px;
+  }
+
+  .item {
+    font-size: 16px;
+  }
+
+  /* Секции "О нас" — в одну колонку */
+  .about-section {
+     flex-direction: column;
+      align-items: stretch;
+  gap: 12px;              /* было 30px */
+  padding: 50px 30px 25px;/* было 90px 16px 40px */
+  margin-top: 0;          /* было 80px */
+  }
+.about-section:first-of-type {
+  margin-top: 80px;
+}
+  .about-section.left-image,
+  .about-section.right-image {
+    flex-direction: column;
+  }
+
+  .image-block,
+  .text-block {
+       flex: 0 0 auto;         /* вместо 1 1 100% */
+  justify-content: flex-start;
+  }
+
+   .about-section .image-block {
+    order: 2;
+  }
+
+  .text-block {
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-block h1,
+  .text-block h2 {
+    font-size: 32px;
+  }
+
+  .text-block p {
+    font-size: 18px;
+  }
+
+  .image-block img {
+    max-width: 100%;
+  }
+
+  /* Футер чуть компактнее */
+  .footer {
+    font-size: 14px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+}
+
+/* Ещё чуть подстрахуемся для совсем маленьких экранов */
+@media (max-width: 480px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  .about-section {
+    padding-top: 100px;
+  }
+}
+
+/* ===== ПЛАНШЕТ (iPad) ===== */
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  /* Навигация */
+  .nav {
+    padding: 14px 30px;
+    gap: 20px;
+  }
+
+  .lis {
+    width: 130px;
+  }
+
+  .item {
+    font-size: 20px;
+  }
+
+  /* Секции */
+  .about-section {
+    flex-direction: row;
+    gap: 40px;
+    padding: 80px 6%;
+    margin-top: 10vh;
+  }
+
+  .about-section.left-image {
+    flex-direction: row;
+  }
+
+  .about-section.right-image {
+    flex-direction: row-reverse;
+  }
+
+  .image-block,
+  .text-block {
+    flex: 1 1 45%;
+  }
+
+  .text-block {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  /* Текст */
+  .text-block h1,
+  .text-block h2 {
+    font-size: 46px;
+  }
+
+  .text-block p {
+    font-size: 20px;
+  }
+
+  .image-block img {
+    max-width: 100%;
+  }
+
+  /* Футер */
+  .footer {
+    font-size: 16px;
+    padding: 25px 0;
+  }
+}
+
+/* ===== БОЛЬШОЙ ДЕСКТОП (ноутбуки/мониторы) ===== */
+@media (min-width: 1201px) and (max-width: 1599px) {
+  .nav {
+    padding: 16px 60px;
+    gap: 34px;
+  }
+
+  .item {
+    font-size: 26px;
+  }
+
+  .about-section {
+    padding: 110px 10%;
+    gap: 70px;
+  }
+
+  .text-block h1,
+  .text-block h2 {
+    font-size: 72px;
+  }
+
+  .text-block p {
+    font-size: 26px;
+    max-width: 720px; /* чтобы строки не были слишком длинными */
+  }
+
+  .image-block img {
+    max-width: 560px;
+  }
+}
+
+/* ===== ОЧЕНЬ ШИРОКИЕ ЭКРАНЫ (2K и т.п.) ===== */
+@media (min-width: 1600px) {
+  .nav {
+    padding: 18px 90px;
+    gap: 40px;
+  }
+
+  .item {
+    font-size: 28px;
+  }
+
+  .about-section {
+    padding: 130px 12%;
+    gap: 90px;
+    max-width: 1600px;   /* ограничиваем общую ширину */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-block h1,
+  .text-block h2 {
+    font-size: 80px;
+  }
+
+  .text-block p {
+    font-size: 28px;
+    max-width: 760px;
+  }
+
+  .image-block img {
+    max-width: 620px;
+  }
+}
+
+/* ===== 5K / 8K / EXTREME SCREENS ===== */
+@media (min-width: 2600px) {
+
+  /* Общая логика: центр + ограничения */
+  .about-section {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 180px 0;
+    gap: 140px;
+  }
+
+  /* Навигация */
+  .nav {
+    padding: 26px 160px;
+    gap: 56px;
+  }
+
+  .lis {
+    width: 190px;
+  }
+
+  .item {
+    font-size: 32px;
+  }
+
+  /* Текст */
+  .text-block h1,
+  .text-block h2 {
+    font-size: 100px;
+    letter-spacing: 1px;
+  }
+
+  .text-block p {
+    font-size: 32px;
+    max-width: 820px;
+    line-height: 1.8;
+  }
+
+  /* Картинки */
+  .image-block img {
+    max-width: 760px;
+    border-radius: 18px;
+  }
+
+  /* Футер */
+  .footer {
+    font-size: 22px;
+    padding: 50px 0;
+  }
+}
+

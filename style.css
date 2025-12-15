@@ -857,3 +857,52 @@ html, body {
     gap: 20px;
   }
 }
+
+@media (min-width: 1440px) {
+  .nav {
+    padding: 18px 80px;
+    gap: 34px;
+  }
+
+  .welche {
+    max-width: 52vw;
+    padding-left: 12vh;
+  }
+
+  .lisSize { font-size: 96px; }
+  .ulsize  { font-size: 28px; }
+
+  .section-below { padding: 80px 16vw; }
+  .section-below .lisSize { font-size: 78px; }
+
+  .section-below2 .carousel { max-width: 980px; }
+
+  .footer { padding: 60px 14vw; }
+}
+
+@media (min-width: 2560px) {
+  .nav {
+    padding: 22px 140px;
+    gap: 46px;
+  }
+
+  .welche {
+    max-width: 980px;
+    margin-left: 14vw;
+  }
+
+  .lisSize { font-size: 112px; }
+  .ulsize  { font-size: 32px; }
+
+  .section-below {
+    max-width: 1500px;
+    padding: 110px 0;
+  }
+
+  .section-below2 .carousel { max-width: 1250px; }
+
+  .footer {
+    max-width: 1700px;
+    padding: 80px 0;
+  }
+}
