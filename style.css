@@ -59,7 +59,7 @@ html, body {
 #video-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -857,6 +857,7 @@ html, body {
     gap: 20px;
   }
 }
+
 
 /* ==========================
    🖥 HD — 1280x720
