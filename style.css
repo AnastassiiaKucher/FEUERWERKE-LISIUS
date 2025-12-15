@@ -858,51 +858,335 @@ html, body {
   }
 }
 
-@media (min-width: 1440px) {
+/* ==========================
+   🖥 HD — 1280x720
+   ========================== */
+@media (min-width: 1280px) and (max-height: 800px) {
+
+  /* Навигация */
   .nav {
-    padding: 18px 80px;
-    gap: 34px;
+    padding: 14px 36px;
   }
 
+  .item {
+    font-size: 24px;
+  }
+
+  .lis {
+    width: 140px;
+  }
+
+  /* Главный блок с текстом */
   .welche {
-    max-width: 52vw;
-    padding-left: 12vh;
+    padding-top: 8vh;     /* меньше, чем на больших экранах */
+    padding-left: 8vh;
+    max-width: 65vw;
+    gap: 16px;
   }
 
-  .lisSize { font-size: 96px; }
-  .ulsize  { font-size: 28px; }
+  .lisSize {
+    font-size: 78px;      /* было 90–100 */
+    line-height: 1.1;
+  }
 
-  .section-below { padding: 80px 16vw; }
-  .section-below .lisSize { font-size: 78px; }
+  .ulsize {
+    font-size: 24px;
+    line-height: 1.35;
+  }
 
-  .section-below2 .carousel { max-width: 980px; }
-
-  .footer { padding: 60px 14vw; }
+  /* Кнопка */
+  .btn {
+    font-size: 22px;
+    padding: 8px 32px;
+    width: auto;
+    margin-left: 0;
+  }
+  #video-container {
+   
+    height: 80vh;
+  
 }
 
-@media (min-width: 2560px) {
-  .nav {
-    padding: 22px 140px;
-    gap: 46px;
-  }
-
-  .welche {
-    max-width: 980px;
-    margin-left: 14vw;
-  }
-
-  .lisSize { font-size: 112px; }
-  .ulsize  { font-size: 32px; }
-
+  /* Секция ниже видео */
   .section-below {
-    max-width: 1500px;
-    padding: 110px 0;
+    padding: 50px 12vw;
   }
 
-  .section-below2 .carousel { max-width: 1250px; }
+  .section-below .lisSize {
+    font-size: 60px;
+  }
 
+  /* Карусель */
+  .section-below2 .carousel {
+    max-width: 820px;
+  }
+
+  /* Футер */
   .footer {
-    max-width: 1700px;
-    padding: 80px 0;
+    padding: 40px 8vw;
+  }
+}
+
+/* ==========================
+   🖥 FHD — 1920x1080
+   ========================== */
+@media (min-width: 1920px) and (min-height: 1080px) {
+
+  /* Видео-блок — возвращаем "полный экран" */
+  #video-container{
+    height: 80vh;
+  }
+
+  /* Навигация */
+  .nav{
+    padding: 18px 70px;
+    gap: 30px;
+  }
+
+  .lis{
+    width: 170px;
+  }
+
+  .item{
+    font-size: 30px;
+  }
+
+  /* Главный текст */
+  .welche{
+    padding-top: 12vh;
+    padding-left: 12vh;
+    max-width: 58vw;
+    gap: 22px;
+  }
+
+  .lisSize{
+    font-size: 96px;
+    line-height: 1.1;
+  }
+
+  .ulsize{
+    font-size: 30px;
+    line-height: 1.45;
+  }
+
+  .btn{
+    font-size: 28px;
+    padding: 12px 44px;
+    margin-left: 0;
+    width: auto;
+  }
+
+  /* Секция под видео */
+  .section-below{
+    padding: 80px 16vw;
+  }
+
+  .section-below .lisSize{
+    font-size: 74px;
+  }
+
+  .reasons{
+    max-width: 720px;
+  }
+
+  /* Карусель */
+  .section-below2{
+    padding: 60px 0 90px;
+  }
+
+  .section-below2 .carousel{
+    max-width: 1050px;
+  }
+
+  /* Футер */
+  .footer{
+    padding: 60px 14vw;
+  }
+}
+
+
+/* ==========================
+   🖥 2K — 2560x1440
+   ========================== */
+@media (min-width: 2560px) and (min-height: 1440px) {
+
+  /* Навигация */
+  .nav{
+    padding: 22px 110px;
+    gap: 36px;
+  }
+
+  .lis{
+    width: 190px;
+  }
+
+  .item{
+    font-size: 34px;
+  }
+
+  /* Первый экран */
+  #video-container{
+    height: 80vh;
+  }
+
+  .welche{
+    padding-top: 13vh;
+    padding-left: 14vh;
+    max-width: 80vw;   /* текст компактнее, чем на FHD */
+    gap: 26px;
+  }
+
+  .lisSize{
+    font-size: 170px;
+    line-height: 1.08;
+  }
+
+  .ulsize{
+    font-size: 40px;
+    line-height: 1.45;
+  }
+
+  .btn{
+    font-size: 40px;
+    padding: 14px 52px;
+    margin-left: 0;
+    width: auto;
+  }
+
+  /* Секция под видео */
+  .section-below{
+    padding: 95px 18vw;
+  }
+
+  .section-below .lisSize{
+    font-size: 86px;
+  }
+
+  .reasons{
+    max-width: 820px;
+  }
+
+  /* Карусель */
+  .section-below2{
+    padding: 70px 0 110px;
+  }
+
+  .section-below2 .carousel{
+    max-width: 1200px;
+  }
+
+  /* Футер */
+  .footer{
+    padding: 70px 16vw;
+  }
+
+  .footer-column p{
+    font-size: 18px;
+  }
+}
+
+/* ==========================
+   🖥 4K — 3840x2160
+   ========================== */
+@media (min-width: 3840px) and (min-height: 2160px) {
+
+  /* Навигация */
+  .nav{
+    padding: 28px 160px;
+    gap: 44px;
+  }
+
+  .lis{
+    width: 230px;
+  }
+
+  .item{
+    font-size: 40px;
+  }
+
+  /* Первый экран */
+  #video-container{
+    height: 90vh;
+  }
+
+  .welche{
+    padding-top: 14vh;
+    padding-left: 16vh;
+    max-width: 90vw;   /* на 4K очень важно зажать ширину текста */
+    gap: 30px;
+  }
+
+  .lisSize{
+    font-size: 200px;
+    line-height: 1.06;
+  }
+
+  .ulsize{
+    font-size: 70px;
+    line-height: 1.55;
+  }
+
+  .btn{
+    font-size: 70px;
+    padding: 16px 64px;
+    border-radius: 14px;
+    margin-left: 0;
+    width: auto;
+  }
+
+  /* Секция под видео */
+  .section-below{
+    padding: 110px 20vw;
+  }
+
+  .section-below .lisSize{
+    font-size: 102px;
+  }
+
+  .reasons{
+    max-width: 980px;
+  }
+
+  .reason-title{
+    font-size: 26px;
+    padding: 18px 26px;
+  }
+
+  .reason-text{
+    font-size: 20px;
+  }
+
+  /* Карусель */
+  .section-below2{
+    padding: 80px 0 130px;
+  }
+
+  .section-below2 .carousel{
+    max-width: 1500px;
+  }
+
+  /* Футер */
+  .footer{
+    padding: 90px 18vw;
+  }
+
+  .footer-column h3{
+    font-size: 30px;
+  }
+
+  .footer-column p{
+    font-size: 20px;
+  }
+
+  .footer-socials a{
+    font-size: 24px;
+  }
+
+  .footer-links a{
+    font-size: 20px;
+  }
+
+  .footer-logo img{
+    max-height: 110px;
   }
 }
