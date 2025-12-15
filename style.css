@@ -1026,7 +1026,7 @@ html, body {
 
   /* Первый экран */
   #video-container{
-    height: 80vh;
+    height: 85vh;
   }
 
   .welche{
@@ -1042,7 +1042,7 @@ html, body {
   }
 
   .ulsize{
-    font-size: 40px;
+    font-size: 45px;
     line-height: 1.45;
   }
 
