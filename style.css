@@ -934,7 +934,7 @@ html, body {
 
   /* Видео-блок — возвращаем "полный экран" */
   #video-container{
-    height: 80vh;
+    height: 70vh;
   }
 
   /* Навигация */
