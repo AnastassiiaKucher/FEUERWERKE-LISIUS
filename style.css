@@ -59,7 +59,7 @@ html, body {
 #video-container {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -812,7 +812,7 @@ html, body {
     margin-bottom: 0;
   }
    #video-container{
-    height: 60vh;
+    height: 100vh;
   }
 
   /* ===== СЕКЦИЯ "Warum Feuerwerke Lisius?" ===== */
@@ -938,7 +938,7 @@ html, body {
 
   /* Видео-блок — возвращаем "полный экран" */
   #video-container{
-    height: 70vh;
+    height: 80vh;
   }
 
   /* Навигация */

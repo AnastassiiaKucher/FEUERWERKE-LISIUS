@@ -84,7 +84,8 @@ body {
 
 .text-block {
   flex-direction: column;
-  text-align: left;
+  text-align: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -396,120 +397,226 @@ body {
   }
 }
 
-/* ===== БОЛЬШОЙ ДЕСКТОП (ноутбуки/мониторы) ===== */
-@media (min-width: 1201px) and (max-width: 1599px) {
-  .nav {
-    padding: 16px 60px;
-    gap: 34px;
-  }
-
-  .item {
-    font-size: 26px;
-  }
-
-  .about-section {
-    padding: 110px 10%;
-    gap: 70px;
-  }
-
-  .text-block h1,
-  .text-block h2 {
-    font-size: 72px;
-  }
-
-  .text-block p {
-    font-size: 26px;
-    max-width: 720px; /* чтобы строки не были слишком длинными */
-  }
-
-  .image-block img {
-    max-width: 560px;
-  }
-}
-
-/* ===== ОЧЕНЬ ШИРОКИЕ ЭКРАНЫ (2K и т.п.) ===== */
-@media (min-width: 1600px) {
-  .nav {
-    padding: 18px 90px;
-    gap: 40px;
-  }
-
-  .item {
-    font-size: 28px;
-  }
-
-  .about-section {
-    padding: 130px 12%;
-    gap: 90px;
-    max-width: 1600px;   /* ограничиваем общую ширину */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .text-block h1,
-  .text-block h2 {
-    font-size: 80px;
-  }
-
-  .text-block p {
-    font-size: 28px;
-    max-width: 760px;
-  }
-
-  .image-block img {
-    max-width: 620px;
-  }
-}
-
-/* ===== 5K / 8K / EXTREME SCREENS ===== */
-@media (min-width: 2600px) {
-
-  /* Общая логика: центр + ограничения */
-  .about-section {
-    max-width: 2000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 180px 0;
-    gap: 140px;
-  }
+/* ===== HD 1280x720 (и близкие) ===== */
+@media (min-width: 1201px) and (max-width: 1366px) {
 
   /* Навигация */
   .nav {
-    padding: 26px 160px;
-    gap: 56px;
+    padding: 12px 28px;
+    gap: 18px;
   }
 
   .lis {
-    width: 190px;
+    width: 130px;
   }
 
   .item {
-    font-size: 32px;
+    font-size: 20px;
+  }
+
+  /* Секции "О нас" */
+  .about-section {
+    gap: 40px;
+    padding: 80px 8%;
+    margin-top: 90px; /* вместо 12vh, стабильнее для 720px по высоте */
+  }
+
+  .image-block img {
+    max-width: 480px; /* было 520 */
   }
 
   /* Текст */
   .text-block h1,
   .text-block h2 {
-    font-size: 100px;
-    letter-spacing: 1px;
+    font-size: 52px; /* было 70 */
+    margin-bottom: 10px;
   }
 
   .text-block p {
-    font-size: 32px;
-    max-width: 820px;
-    line-height: 1.8;
-  }
-
-  /* Картинки */
-  .image-block img {
-    max-width: 760px;
-    border-radius: 18px;
+    font-size: 21px; /* было 25 */
+    line-height: 1.55;
   }
 
   /* Футер */
   .footer {
+    padding: 30px 8vw;
+  }
+}
+
+/* ===== FHD 1920x1080 (и близкие) ===== */
+@media (min-width: 1681px) and (max-width: 2100px) {
+
+  /* Навигация */
+  .nav {
+    padding: 18px 60px;
+    gap: 34px;
+  }
+
+  .lis {
+    width: 160px;
+  }
+
+  .item {
+    font-size: 26px; /* чуть меньше твоих 28, чтобы аккуратнее */
+  }
+
+  /* Секции */
+  .about-section {
+    gap: 70px;
+    padding: 120px 12%;
+    margin-top: 110px; /* вместо 12vh */
+  }
+
+  .image-block img {
+    max-width: 560px; /* немного больше стандартных 520 */
+  }
+
+  /* Текст */
+  .text-block h1,
+  .text-block h2 {
+    font-size: 72px; /* можно 70-76; тут чуть выразительнее */
+    margin-bottom: 14px;
+  }
+
+  .text-block p {
+    font-size: 26px;
+    line-height: 1.6;
+  }
+
+  /* Футер */
+  .footer {
+    padding: 50px 12vw;
+  }
+
+  .footer-logo img {
+    max-height: 90px;
+  }
+}
+
+/* ===== 2K / 2560x1440 ===== */
+@media (min-width: 2101px) and (max-width: 3000px) {
+
+  /* Навигация */
+  .nav {
+    padding: 20px 90px;
+    gap: 40px;
+  }
+
+  .lis {
+    width: 180px;
+  }
+
+  .item {
+    font-size: 28px;
+  }
+
+  /* Секции */
+  .about-section {
+    max-width: 1800px;      /* ограничиваем ширину */
+    margin: 120px auto 0;   /* центрируем */
+    gap: 90px;
+    padding: 140px 120px;
+  }
+
+  .image-block img {
+    max-width: 620px;
+  }
+
+  /* Текст */
+  .text-block h1,
+  .text-block h2 {
+    font-size: 82px;
+    margin-bottom: 18px;
+  }
+
+  .text-block p {
+    font-size: 35px;
+    line-height: 1.65;
+    max-width: 720px; /* чтобы строки не были слишком длинными */
+  }
+
+  /* Футер */
+  .footer {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 60px 120px;
+  }
+
+  .footer-logo img {
+    max-height: 110px;
+  }
+
+  .footer-links a,
+  .footer-column p {
+    font-size: 18px;
+  }
+}
+
+/* ===== 4K / 3840x2160 ===== */
+@media (min-width: 3001px) {
+
+  /* Навигация */
+  .nav {
+    padding: 26px 140px;
+    gap: 50px;
+  }
+
+  .lis {
+    width: 210px;
+  }
+
+  .item {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  /* Секции */
+  .about-section {
+    max-width: 2200px;        /* жёсткое ограничение */
+    margin: 140px auto 0;
+    padding: 160px 160px;
+    gap: 110px;
+  }
+
+  .image-block img {
+    max-width: 800px;
+  }
+
+  /* Текст */
+  .text-block h1,
+  .text-block h2 {
+    font-size: 100px;          /* не гонимся за 100+ */
+    margin-bottom: 20px;
+  }
+
+  .text-block p {
+    font-size: 50px;
+    line-height: 1.7;
+    max-width: 760px;
+  }
+
+  /* Футер */
+  .footer {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: 70px 160px;
+  }
+
+  .footer-logo img {
+    max-height: 130px;
+  }
+
+  .footer-column h3 {
+    font-size: 26px;
+  }
+
+  .footer-column p,
+  .footer-links a {
+    font-size: 19px;
+  }
+
+  .footer-socials a {
     font-size: 22px;
-    padding: 50px 0;
   }
 }
 
