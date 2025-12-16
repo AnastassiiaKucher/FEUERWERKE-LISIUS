@@ -337,3 +337,384 @@ body {
   font-size: 18px;
   display: block;
 }
+
+/* ===== ФУТЕР ===== */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1d;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 40px 10vw;
+  box-sizing: border-box;
+  gap: 25px;
+}
+
+/* ===== Верхняя часть ===== */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column h3 {
+  margin: 0;
+  color: #fdc367;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-column p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fdc367;
+}
+
+/* ===== Разделительная линия ===== */
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+  margin: 10px 0;
+}
+
+/* ===== Нижняя часть ===== */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+
+/* Соцсети */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #fdc367;
+}
+
+/* Ссылки */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fdc367;
+  text-decoration: underline;
+}
+
+/* Лого */
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 8vh;
+  max-height: 80px;
+  width: auto;
+}
+
+/* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
+.nav a:hover {
+  color: #fdc367;
+}
+
+
+/* =========================
+   ADAPTIVE <= 900px
+========================= */
+@media (max-width: 900px) {
+
+  /* BODY */
+  body { padding-top: 140px; }
+
+  /* NAV (как на других страницах) */
+  .nav {
+    padding: 10px 14px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .lis { width: 120px; }
+
+  .item {
+    font-size: 15px;
+  }
+
+  .nav .toptop{
+    white-space: nowrap;
+  }
+
+  /* REFERENZEN */
+  .references{
+    margin: 140px auto 50px auto;
+    gap: 40px;
+  }
+
+  .references h1{
+    font-size: 44px;
+  }
+
+  .references .intro{
+    font-size: 18px;
+  }
+
+  .projects{
+    gap: 22px;
+  }
+
+  .project{
+    max-width: 620px;
+    flex: 1 1 520px;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .project h2{ font-size: 26px; }
+  .project p{ font-size: 16px; }
+  .project iframe{ height: 220px; }
+
+  .more{
+    align-self: center;
+    font-size: 16px;
+  }
+
+  /* REVIEWS */
+  .reviews-section{
+    padding: 70px 16px;
+    gap: 35px;
+  }
+
+  .reviews-title h2{
+    font-size: 38px;
+  }
+
+  .reviews-subtitle{
+    font-size: 16px;
+    max-width: 650px;
+  }
+
+  .review-slide{
+    padding: 0;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  /* Отзывы: всегда колонка, без min-width */
+  .boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .box{
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .box-yellow,
+  .box-grey{
+    width: 100%;
+    padding: 18px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 140px; /* чтобы при листании меньше прыгало */
+  }
+
+  /* Клиенты: тоже колонка и без сдвигов nth-child */
+  .clients{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 6px;
+    flex-wrap: nowrap;
+     align-items: center;
+    text-align: center;
+  }
+
+  .clients .client:nth-child(1),
+  .clients .client:nth-child(2){
+    margin-left: 0;
+    margin-right: 0;
+    order: initial;
+    align-self: stretch;
+  }
+
+  .client{
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+      justify-content: center;
+    text-align: center;
+  }
+
+  .client img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-info{
+     text-align: center;
+  }
+
+  .client-info strong,
+  .client-info span{
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .client-info strong{ font-size: 16px; }
+  .client-info span{ font-size: 14px; }
+
+  /* FOOTER */
+ .footer-top{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-column{
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column p,
+  .footer-column a{
+    text-align: center;
+  }
+
+  .footer-socials,
+  .footer-links,
+  .footer-logo{
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   ADAPTIVE <= 480px
+========================= */
+@media (max-width: 480px) {
+
+  /* NAV */
+  body { padding-top: 150px; }
+
+  .nav{ gap: 8px; }
+  .lis{ width: 110px; }
+
+  .item{ font-size: 13px; }
+
+  /* REFERENZEN */
+  .references{
+    margin: 10px auto 40px auto;
+    gap: 28px;
+  }
+
+  .references h1{ font-size: 30px; }
+
+  .references .intro{
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .project{ padding: 14px; }
+  .project h2{ font-size: 20px; }
+  .project p{ font-size: 14px; }
+  .project iframe{ height: 190px; }
+
+  /* REVIEWS */
+  .reviews-title h2{ font-size: 28px; }
+  .reviews-subtitle{ font-size: 14px; }
+
+  .reviews-controls{ gap: 12px; }
+  .reviews-btn{
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+
+  .box-yellow,
+  .box-grey{
+    font-size: 14px;
+    padding: 16px 14px;
+    min-height: 130px;
+  }
+
+  .client img{
+    width: 56px;
+    height: 56px;
+  }
+
+  .client-info strong{ font-size: 15px; }
+  .client-info span{ font-size: 13px; }
+
+  /* FOOTER */
+  .footer-column h3{ font-size: 18px; }
+  .footer-column p{ font-size: 14px; }
+
+  .footer-links{
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer-logo img{
+    max-height: 60px;
+  }
+}
