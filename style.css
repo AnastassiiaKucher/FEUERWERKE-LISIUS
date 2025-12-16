@@ -19,7 +19,9 @@ html, body {
   flex-wrap: wrap;
   padding: 15px 40px;
   box-sizing: border-box;
-  gap: 25px; /* расстояние между элементами навигации */
+  gap: 30px; /* расстояние между элементами навигации */
+  width: 100%;
+   
 }
 
 .first {
