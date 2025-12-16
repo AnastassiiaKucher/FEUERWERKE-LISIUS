@@ -537,9 +537,8 @@ body {
 
   /* Футер */
   .footer {
-    max-width: 1800px;
     margin: 0 auto;
-    padding: 60px 120px;
+    padding: 40px 10vw;
   }
 
   .footer-logo img {
