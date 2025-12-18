@@ -267,7 +267,7 @@ body {
   margin-top: 0;          /* было 80px */
   }
 .about-section:first-of-type {
-  margin-top: 80px;
+  margin-top: 20px;
 }
   .about-section.left-image,
   .about-section.right-image {
