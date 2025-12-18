@@ -53,3 +53,54 @@
   // немного позже обновим высоту (если грузятся картинки)
   setTimeout(updateViewportHeight, 500);
 })();
+
+(function () {
+  const MOBILE_BREAKPOINT = 900;
+
+  // Запомним, где изначально лежали .client, чтобы вернуть обратно
+  const originalParents = new Map();
+
+  function moveClientsIntoBoxes() {
+    const slides = document.querySelectorAll(".review-slide");
+
+    slides.forEach(slide => {
+      const boxes = slide.querySelectorAll(".boxes .box");
+      const clients = slide.querySelectorAll(".clients .client");
+
+      // Сопоставляем по индексу: 1-й отзыв -> 1-й клиент, 2-й отзыв -> 2-й клиент
+      boxes.forEach((box, i) => {
+        const client = clients[i];
+        if (!client) return;
+
+        if (!originalParents.has(client)) {
+          originalParents.set(client, client.parentElement);
+        }
+
+        // переносим клиента внутрь .box (в самый конец)
+        box.appendChild(client);
+      });
+    });
+  }
+
+  function restoreClientsBack() {
+    // возвращаем каждого клиента туда, где он был изначально
+    originalParents.forEach((parent, client) => {
+      if (parent && parent.contains(client) === false) {
+        parent.appendChild(client);
+      } else if (parent) {
+        parent.appendChild(client);
+      }
+    });
+  }
+
+  function applyLayout() {
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      moveClientsIntoBoxes();
+    } else {
+      restoreClientsBack();
+    }
+  }
+
+  window.addEventListener("load", applyLayout);
+  window.addEventListener("resize", applyLayout);
+})();
