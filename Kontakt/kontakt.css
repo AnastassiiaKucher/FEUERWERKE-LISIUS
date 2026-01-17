@@ -218,3 +218,157 @@ textarea {
 .contact-info a:hover {
   color: white;
 }
+
+@media (max-width: 900px) {
+
+  body {
+    padding-top: 80px;
+  }
+
+  /* ===== НАВИГАЦИЯ ===== */
+
+  .nav {
+    padding: 10px 14px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .lis {
+    width: 120px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+  /* ===== MAIN ===== */
+  main {
+    gap: 40px;
+    padding: 40px 15px 80px;
+  }
+
+  /* ===== ФОРМА ===== */
+  .contact-form {
+    padding: 25px;
+    gap: 18px;
+  }
+
+  .contact-form h2 {
+    font-size: 40px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  /* ===== КОНТАКТЫ ===== */
+  .contact-info {
+    font-size: 18px;
+  }
+
+  .contact-info h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 70px;
+  }
+
+  /* ===== НАВИГАЦИЯ ===== */
+
+  .nav {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lis {
+    width: 90px;
+  }
+
+  .item {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  /* ===== MAIN ===== */
+
+  main {
+    padding: 30px 10px 60px;
+    gap: 30px;
+  }
+
+  /* ===== ФОРМА ===== */
+
+  .contact-form {
+    padding: 18px;
+    gap: 14px;
+    border-radius: 12px;
+  }
+
+  .contact-form h2 {
+    font-size: 28px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+
+  .checkbox-group {
+    font-size: 12px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* ===== КОНТАКТЫ ===== */
+
+  .contact-info {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .contact-info h2 {
+    font-size: 22px;
+  }
+}
+

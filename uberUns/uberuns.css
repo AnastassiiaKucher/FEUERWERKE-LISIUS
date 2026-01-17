@@ -551,71 +551,76 @@ body {
   }
 }
 
-/* ===== 4K / 3840x2160 ===== */
+/* ===== 4K / 3840x2160 — как 2K, только больше ===== */
 @media (min-width: 3001px) {
 
   /* Навигация */
   .nav {
-    padding: 26px 140px;
-    gap: 50px;
+    padding: 30px 140px;
+    gap: 60px;
   }
 
-  .lis {
-    width: 210px;
-  }
+  .lis { width: 240px; }
 
   .item {
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 36px;
   }
 
   /* Секции */
   .about-section {
-    max-width: 2200px;        /* жёсткое ограничение */
-    margin: 140px auto 0;
-    padding: 160px 160px;
-    gap: 110px;
+    
+    margin: 100px auto 0;
+    gap: 140px;
+    padding: 180px 160px;
   }
 
   .image-block img {
-    max-width: 800px;
+    max-width: 900px;
   }
 
   /* Текст */
   .text-block h1,
   .text-block h2 {
-    font-size: 100px;          /* не гонимся за 100+ */
-    margin-bottom: 20px;
+    font-size: 120px;
+    margin-bottom: 26px;
   }
 
   .text-block p {
-    font-size: 50px;
+    font-size: 46px;
     line-height: 1.7;
-    max-width: 760px;
+    max-width: 1100px;
   }
 
   /* Футер */
-  .footer {
-    max-width: 2200px;
+   .footer {
+    
     margin: 0 auto;
-    padding: 70px 160px;
+    padding: 80px 200px;    /* больше воздуха */
   }
 
-  .footer-logo img {
-    max-height: 130px;
+  .footer-top {
+    gap: 60px;              /* колонки не слипаются */
+  }
+
+  .footer-column {
+    flex: 1 1 400px;        /* шире колонки */
   }
 
   .footer-column h3 {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .footer-column p,
-  .footer-links a {
-    font-size: 19px;
+  .footer-links a,
+  .footer-bottom {
+    font-size: 22px;
   }
 
   .footer-socials a {
-    font-size: 22px;
+    font-size: 26px;
+  }
+
+  .footer-logo img {
+    max-height: 160px;      /* логотип крупнее */
   }
 }
-
