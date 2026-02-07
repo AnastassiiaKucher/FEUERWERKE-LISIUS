@@ -27,19 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.querySelectorAll('.reason-title').forEach(button => {
-  button.addEventListener('click', () => {
-    const text = button.nextElementSibling;
-    const isOpen = text.classList.contains('open');
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".reason-title");
 
-    // Закрываем все тексты
-    document.querySelectorAll('.reason-text').forEach(t => t.classList.remove('open'));
-    document.querySelectorAll('.reason-title').forEach(b => b.classList.remove('active'));
+  // 👉 сразу открываем первый пункт
+  if (buttons.length > 0) {
+    buttons[0].classList.add("active");
+    const firstText = buttons[0].nextElementSibling;
+    if (firstText) firstText.classList.add("open");
+  }
 
-    // Открываем только текущий
-    if (!isOpen) {
-      button.classList.add('active');
-      text.classList.add('open');
-    }
+  // 👉 клики по кнопкам
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const text = button.nextElementSibling;
+      const isOpen = text.classList.contains("open");
+
+      document.querySelectorAll(".reason-text").forEach((t) =>
+        t.classList.remove("open")
+      );
+      buttons.forEach((b) => b.classList.remove("active"));
+
+      if (!isOpen) {
+        button.classList.add("active");
+        text.classList.add("open");
+      }
+    });
   });
 });
