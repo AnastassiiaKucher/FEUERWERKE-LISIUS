@@ -8,14 +8,11 @@ body {
   font-weight: 350;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding-top: 100px; /* чтобы контент не перекрывался навигацией */
+  padding-top: 100px; 
 }
-
-
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
   display: flex;
@@ -31,19 +28,16 @@ body {
   background-color: #141416;
   z-index: 10;
 }
-
 .first {
   margin-right: auto;
   display: flex;
   align-items: center;
 }
-
 .lis {
   width: 150px;
   height: auto;
   display: block;
 }
-
 .item {
   color: white;
   text-transform: uppercase;
@@ -52,12 +46,10 @@ body {
   font-weight: 350;
   transition: color 0.3s ease;
 }
-
 .item:hover,
 .nav a.active {
   color: #fdc367;
 }
-
 /* ===== РАЗДЕЛ REFERENZEN ===== */
 .references {
   display: flex;
@@ -65,20 +57,20 @@ body {
   align-items: center;
   text-align: center;
   max-width: 1000px;
-  margin: 160px auto 60px auto;
+  margin: 60px auto 60px auto;
   padding: 0 20px;
   gap: 60px;
 }
 
 .references h1 {
   color: #fec260;
-  font-size: 70px;
+  font-size: 40px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .references .intro {
-  font-size: 25px;
+  font-size: 18px;
   line-height: 1.6;
   color: #ddd;
   font-weight: 350;
@@ -120,10 +112,12 @@ body {
 }
 
 .project p {
-  font-size: 20px;
+   font-size: 20px;
   color: #eaeaea;
   line-height: 1.5;
   margin: 0 0 20px 0;
+  flex-grow: 1; 
+
 }
 
 .project iframe {
@@ -154,7 +148,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 100px 8vw; /* больше воздуха по бокам */
+  padding: 100px 8vw;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
@@ -288,12 +282,12 @@ body {
   gap: 40px;
   width: 100%;
   max-width: 1100px;
-  margin-top: -20px; /* приближаем к отзывам */
+  margin-top: -20px; 
   flex-wrap: wrap;
   position: relative;
 }
 
-/* Привязываем клиентов визуально под отзывами */
+
 .clients .client:nth-child(1) {
   align-self: flex-start;
   order: 1;
@@ -356,7 +350,7 @@ body {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   /* ← ВАЖНО */
+  justify-content: center;   
   align-items: center;
   gap: 20px;
 }
@@ -365,7 +359,7 @@ body {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-   align-items: center;       /* ← центр по горизонтали */
+   align-items: center;    
   text-align: center; 
   gap: 8px;
 }

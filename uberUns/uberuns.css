@@ -8,17 +8,17 @@ body {
   font-weight: 350;
   overflow-x: hidden;
   box-sizing: border-box;
+  padding-top: 100px; 
 }
-
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 30px;
   padding: 15px 40px;
   position: fixed;
@@ -28,28 +28,24 @@ body {
   background-color: #141416;
   z-index: 10;
 }
-
 .first {
   margin-right: auto;
   display: flex;
   align-items: center;
 }
-
 .lis {
   width: 150px;
   height: auto;
   display: block;
 }
-
 .item {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 350;
   transition: color 0.3s ease;
 }
-
 .item:hover,
 .nav a.active {
   color: #fdc367;
@@ -62,7 +58,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
-  padding: 100px 10%;
+  padding: 50px;
   margin-top: 12vh;
 }
 
@@ -105,18 +101,17 @@ body {
 .text-block h1,
 .text-block h2 {
   color: #fec260;
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 500;
   margin: 0 0 15px 0;
   text-transform: uppercase;
 }
 
 .text-block p {
-  font-size: 25px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0;
 }
-
 
 /* ===== ФУТЕР ===== */
 .footer {
@@ -134,8 +129,8 @@ body {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;   
+  align-items: center;
   gap: 20px;
 }
 
@@ -143,6 +138,8 @@ body {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
+   align-items: center;    
+  text-align: center; 
   gap: 8px;
 }
 
@@ -239,7 +236,6 @@ body {
 .nav a:hover {
   color: #fdc367;
 }
-
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 900px) {

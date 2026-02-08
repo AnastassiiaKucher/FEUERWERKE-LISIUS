@@ -1,27 +1,26 @@
 /* ===== ОБЩИЕ НАСТРОЙКИ ===== */
 body {
-  background-color: #000;
+  background-color: #141416;
   margin: 0;
+  padding: 0;
+  color: #f5f5f5;
   font-family: "Roboto Condensed", sans-serif;
-  color: #fff;
+  font-weight: 350;
+  overflow-x: hidden;
+  box-sizing: border-box; 
 }
-html, body {
-  overflow-x: hidden; /* убираем горизонтальную прокрутку */
-  width: 100%;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
-
-
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
+  gap: 30px;
   padding: 15px 40px;
-  box-sizing: border-box;
-  gap: 30px; /* расстояние между элементами навигации */
   width: 100%;
-   
 }
 
 .first {
@@ -35,28 +34,19 @@ html, body {
   height: auto;
   display: block;
 }
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px; /* современный способ задать промежутки */
-}
-
 .item {
   color: white;
-  font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 30px;
   font-weight: 350;
   transition: color 0.3s ease;
 }
 
-.item:hover {
+.item:hover,
+.nav a.active {
   color: #fdc367;
 }
-
 /* ===== ВИДЕО ФОН ===== */
 #video-container {
   position: relative;
@@ -68,6 +58,9 @@ html, body {
   overflow: hidden;
   box-sizing: border-box;
 }
+#video-container .nav a.item {
+  font-size: 30px;
+}
 
 #myVideo {
   position: fixed;
@@ -77,7 +70,7 @@ html, body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(40%);
+  filter: brightness(45%);
 }
 
 /* ===== ГЛАВНЫЙ ТЕКСТ НА ВИДЕО ===== */
@@ -251,7 +244,7 @@ html, body {
   overflow: hidden;
   opacity: 0;
   transition: all 0.4s ease;
-  font-size: 1rem;
+  font-size: 18px !important;
   color: #e5e5e5;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
@@ -261,7 +254,7 @@ html, body {
 }
 
 .reason-text.open {
-  max-height: 200px;
+  max-height: 500px;
   opacity: 1;
   padding: 15px 20px;
 }

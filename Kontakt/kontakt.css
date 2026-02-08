@@ -6,30 +6,30 @@ body {
   color: #f5f5f5;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 350;
-  font-style: normal;
+ 
   overflow-x: hidden;
   box-sizing: border-box;
   padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
+}
+.centr{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
 /* Общий box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
-/* ===== НАВИГАЦИЯ ===== */
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
-  display: flex;
+ display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 30px;
   padding: 15px 40px;
   position: fixed;
   top: 0;
@@ -52,10 +52,10 @@ body {
 }
 
 .item {
-  color: white;
+   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 350;
   transition: color 0.3s ease;
 }
@@ -101,7 +101,7 @@ main {
 
 .contact-form h2 {
   color: #fec260;
-  font-size: 60px;
+  font-size: 40px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
@@ -116,7 +116,7 @@ main {
 }
 
 label {
-  font-size: 22px;
+  font-size: 18px;
   color: #fdc367;
 }
 
@@ -220,12 +220,11 @@ textarea {
 }
 
 
-
 /* ===== ФУТЕР ===== */
 .footer {
   display: flex;
   flex-direction: column;
- 
+  background-color: #1a1a1d;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
   padding: 40px 10vw;
@@ -237,7 +236,7 @@ textarea {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   /* ← ВАЖНО */
+  justify-content: center;   
   align-items: center;
   gap: 20px;
 }
@@ -246,7 +245,7 @@ textarea {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-   align-items: center;       /* ← центр по горизонтали */
+   align-items: center;    
   text-align: center; 
   gap: 8px;
 }
