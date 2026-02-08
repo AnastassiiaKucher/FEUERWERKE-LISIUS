@@ -79,7 +79,6 @@ body {
 
 .blog-subtitle {
   font-size: 25px;
-  color: #cfcfcf;
   font-weight: 350;
   margin: 0;
 }
@@ -136,6 +135,7 @@ body {
   border-radius: 8px;
   font-weight: 600;
 }
+
 
 .blog-date {
   align-self: flex-end;
@@ -289,7 +289,7 @@ body {
 }
 
 .footer-logo img {
-  height: 8vh;
+  height: 50px;
   max-height: 80px;
   width: auto;
 }
@@ -647,24 +647,25 @@ body {
 /* ===== 2K / 2560x1440 ===== */
 @media (min-width: 2101px) and (max-width: 3000px) {
 
+   /* ===== BODY ===== */
   body {
-    padding-top: 120px;
+    padding-top: 135px;
   }
 
-  /* NAV */
+  /* ===== NAVIGATION ===== */
   .nav {
-    padding: 20px 90px;
+    padding: 22px 90px;
     gap: 38px;
+    flex-wrap: nowrap;
   }
 
   .lis {
-    width: 180px;
+    width: 185px;
   }
 
   .item {
-    font-size: 28px;
+    font-size: 30px;
   }
-
   /* BLOG SECTION */
   .blog-section {
     max-width: 2000px;      /* ключевой момент */
@@ -673,11 +674,11 @@ body {
   }
 
   .blog-title {
-    font-size: 84px;
+    font-size: 60px;
   }
 
   .blog-subtitle {
-    font-size: 28px;
+    font-size: 27px;
     max-width: 1000px;
   }
 
@@ -707,12 +708,12 @@ body {
   }
 
   .blog-heading {
-    font-size: 30px;
+    font-size: 42px;
     margin: 20px 22px 10px;
   }
 
   .blog-text {
-    font-size: 22px;
+    font-size: 27px;
     margin: 0 22px 22px;
     line-height: 1.6;
   }

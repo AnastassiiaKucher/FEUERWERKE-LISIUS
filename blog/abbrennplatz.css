@@ -12,6 +12,7 @@ body{
 }
 *, *::before, *::after{ box-sizing:inherit; }
 
+
 /* ===== NAV (как у тебя) ===== */
 .nav{
   display:flex;
@@ -233,7 +234,7 @@ body{
   align-items:center;
 }
 .footer-logo img{
-  height:8vh;
+  height: 50px;
   max-height:80px;
   width:auto;
 }
@@ -279,4 +280,19 @@ body{
 
   .footer{ padding:32px 18px; }
   .footer-logo img{ height:52px; max-height:52px; }
+}
+
+
+/* ===== 2K / 2560x1440 ===== */
+@media (min-width: 2101px) and (max-width: 3000px) {
+
+  h1{
+    font-size: 60px  !important;
+  }
+  h2{
+    font-size: 52px  !important; 
+  }
+  p{
+    font-size: 27px  !important;
+  }
 }

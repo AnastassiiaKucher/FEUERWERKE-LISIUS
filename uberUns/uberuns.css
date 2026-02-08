@@ -227,7 +227,7 @@ body {
 }
 
 .footer-logo img {
-  height: 8vh;
+  height: 50px;
   max-height: 80px;
   width: auto;
 }
@@ -491,27 +491,32 @@ body {
 
 /* ===== 2K / 2560x1440 ===== */
 @media (min-width: 2101px) and (max-width: 3000px) {
+ /* ===== BODY ===== */
+  body {
+    padding-top: 135px;
+  }
 
-  /* Навигация */
+  /* ===== NAVIGATION ===== */
   .nav {
-    padding: 20px 90px;
-    gap: 40px;
+    padding: 22px 90px;
+    gap: 38px;
+    flex-wrap: nowrap;
   }
 
   .lis {
-    width: 180px;
+    width: 185px;
   }
 
   .item {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   /* Секции */
   .about-section {
     max-width: 1800px;      /* ограничиваем ширину */
-    margin: 120px auto 0;   /* центрируем */
+    margin: 50px auto 0;   /* центрируем */
     gap: 90px;
-    padding: 140px 120px;
+    padding: 50px 50px;
   }
 
   .image-block img {
@@ -519,14 +524,14 @@ body {
   }
 
   /* Текст */
-  .text-block h1,
-  .text-block h2 {
-    font-size: 82px;
+  .text-block h2{
+    font-size: 52px;
     margin-bottom: 18px;
   }
 
+
   .text-block p {
-    font-size: 35px;
+    font-size: 27px;
     line-height: 1.65;
     max-width: 720px; /* чтобы строки не были слишком длинными */
   }

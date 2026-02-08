@@ -19,8 +19,10 @@ body {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 15px 40px;
+  padding: 20px 40px;
   width: 100%;
+
+  z-index: 2;
 }
 
 .first {
@@ -29,8 +31,8 @@ body {
   align-items: center;
 }
 
-.lis {
-  width: 150px;
+.logo-nav {
+  width: 300px;
   height: auto;
   display: block;
 }
@@ -82,7 +84,7 @@ body {
   gap: 15px;
   color: white;
   padding-left: 10vh; /* чтобы текст оставался немного слева */
-  padding-top: 5vh;
+  padding-top: 12px;
   box-sizing: border-box;
   max-width: 90%;
 }
@@ -91,17 +93,25 @@ body {
   font-weight: 500;
   color: #fec260;
   font-size: 100px;
+  margin: 0; 
 }
 
-.ulsize {
+.ulsize{
   font-weight: 350;
   color: white;
-  font-size: 30px;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
+/* отдельно заголовок */
+h2.ulsize{
+  font-size: 50px;
+  margin: 0 0 8px 0;
+}
+
+/* отдельно список (и li унаследуют) */
+ul.ulsize{
+  font-size: 40px;
+}
 /* ===== КНОПКА ===== */
 .btn {
   background: #fec260;
@@ -143,7 +153,7 @@ body {
 
 
 /* ===== КНОПКА КОНТАКТА ===== */
-.btn {
+.cta-btn {
   background: #fec260;
   width: 30vh;
   padding: 10px;
@@ -157,7 +167,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.btn:hover {
+.cta-btn:hover {
   transform: translateY(-2px);
 }
 
@@ -276,8 +286,8 @@ body {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;   
+  align-items: center;
   gap: 20px;
 }
 
@@ -285,6 +295,8 @@ body {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
+   align-items: center;    
+  text-align: center; 
   gap: 8px;
 }
 
@@ -372,9 +384,9 @@ body {
 }
 
 .footer-logo img {
-  height: 8vh;
-  max-height: 80px;
-  width: auto;
+ width: 300px;
+  height: auto;
+  display: block;
 }
 
 /* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
@@ -785,7 +797,7 @@ body {
   .welche {
     max-width: 60vw;        /* текст не будет растягиваться на всю ширину */
     padding-left: 10vh;     /* как и было на десктопе, но с ограничением ширины */
-    padding-top: 12vh;      /* чуть больше воздуха сверху на больших экранах */
+    padding-top: 10px;      /* чуть больше воздуха сверху на больших экранах */
     gap: 20px;
   }
 
@@ -877,7 +889,7 @@ body {
 
   /* Главный блок с текстом */
   .welche {
-    padding-top: 8vh;     /* меньше, чем на больших экранах */
+   padding-top: clamp(1px, 0.3vh, 1px);  /* меньше, чем на больших экранах */
     padding-left: 8vh;
     max-width: 65vw;
     gap: 16px;
@@ -952,7 +964,7 @@ body {
 
   /* Главный текст */
   .welche{
-    padding-top: 12vh;
+    padding-top: clamp(5px, 2vh, 40px);
     padding-left: 12vh;
     max-width: 58vw;
     gap: 22px;
@@ -981,6 +993,7 @@ body {
   }
 
   .section-below .lisSize{
+    margin: 0; 
     font-size: 74px;
   }
 
@@ -1009,19 +1022,24 @@ body {
    ========================== */
 @media (min-width: 2560px) and (min-height: 1440px) {
 
-  /* Навигация */
-  .nav{
-    padding: 22px 110px;
-    gap: 36px;
+  /* ===== NAVIGATION ===== */
+  .nav {
+    padding: 20px 40px;
+    gap: 38px;
+    flex-wrap: nowrap;
+
+      position: absolute;
+ 
   }
 
-  .lis{
-    width: 190px;
+  .logo-nav {
+    width: 185px;
   }
 
-  .item{
-    font-size: 34px;
+  .item {
+    font-size: 30px;
   }
+
 
   /* Первый экран */
   #video-container{
@@ -1029,23 +1047,41 @@ body {
   }
 
   .welche{
-    padding-top: 13vh;
+    padding-top: clamp(16px, 5vh, 80px);
     padding-left: 14vh;
     max-width: 80vw;   /* текст компактнее, чем на FHD */
     gap: 26px;
   }
 
-  .lisSize{
-    font-size: 170px;
-    line-height: 1.08;
-  }
+.section-below .lisSize{
+  margin: 0; 
+  font-size: 52px !important;
+  line-height: 1.08;
+}
 
-  .ulsize{
-    font-size: 45px;
-    line-height: 1.45;
-  }
+.section-below .reason-text{
+  font-size: 27px!important;
+  line-height: 1.45;
+}
+.ulsize{
+  font-weight: 350;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .btn{
+/* отдельно заголовок */
+h2.ulsize{
+  font-size: 60px !important ;
+  margin: 0 0 8px 0;
+}
+
+/* отдельно список (и li унаследуют) */
+ul.ulsize{
+  font-size: 60px !important;
+}
+  .cta-btn{
     font-size: 40px;
     padding: 14px 52px;
     margin-left: 0;
@@ -1058,8 +1094,10 @@ body {
   }
 
   .section-below .lisSize{
-    font-size: 86px;
-  }
+    margin: 0; 
+  font-size: 52px;
+  line-height: 1.08; /* по желанию */
+}
 
   .reasons{
     max-width: 820px;
@@ -1109,7 +1147,7 @@ body {
   }
 
   .welche{
-    padding-top: 14vh;
+    padding-top: clamp(16px, 5vh, 80px);
     padding-left: 16vh;
     max-width: 90vw;   /* на 4K очень важно зажать ширину текста */
     gap: 30px;

@@ -122,7 +122,8 @@ body {
 
 .project iframe {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16 / 9;
+  height: auto;          /* важно */
   border: none;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -448,7 +449,7 @@ body {
 }
 
 .footer-logo img {
-  height: 8vh;
+  height: 50px;
   max-height: 80px;
   width: auto;
 }
@@ -1115,12 +1116,12 @@ body {
   }
 
   .references h1 {
-    font-size: 88px;
+    font-size: 60px;
     line-height: 1.05;
   }
 
   .references .intro {
-    font-size: 28px;
+    font-size: 27px;
     max-width: 1400px;
     line-height: 1.7;
   }

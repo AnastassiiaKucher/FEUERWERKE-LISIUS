@@ -108,6 +108,7 @@ main {
   margin-bottom: 20px;
 }
 
+
 /* ===== ГРУППЫ ПОЛЕЙ ===== */
 .form-group {
   display: flex;
@@ -334,7 +335,7 @@ textarea {
 }
 
 .footer-logo img {
-  height: 8vh;
+  height: 50px;
   max-height: 80px;
   width: auto;
 }
@@ -495,4 +496,33 @@ textarea {
     font-size: 22px;
   }
 }
+/* =========================
+   2101px – 3000px (2K / large monitors)
+   ========================= */
+@media (min-width: 2101px) and (max-width: 3000px) {
+  .fonty{
+    font-size: 52px;
+  }
+  label{
+    font-size: 27px;
+  }
+   /* ===== BODY ===== */
+  body {
+    padding-top: 135px;
+  }
 
+  /* ===== NAVIGATION ===== */
+  .nav {
+    padding: 22px 90px;
+    gap: 38px;
+    flex-wrap: nowrap;
+  }
+
+  .lis {
+    width: 185px;
+  }
+
+  .item {
+    font-size: 30px;
+  }
+}
