@@ -1,0 +1,6 @@
+Add-Content .gitignore "`nPyrotechniker Rostock.mp4`n*.mp4"
+git add .gitignore
+git commit -m "Ignore videos"
+
+Pyrotechniker Rostock.mp4
+*.mp4
