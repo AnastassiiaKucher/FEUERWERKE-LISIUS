@@ -19,7 +19,7 @@ body {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 15px 40px;
+  padding: 6px 40px;
   width: 100%;
 
   z-index: 2;
@@ -32,15 +32,20 @@ body {
 }
 
 .logo-nav {
-  width: 150px;
-  height: auto;
-  display: block;
+    width: clamp(120px, 55%, 170px);
+    height:auto;
+    display:block;
 }
 .item {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
+    line-height: 1;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
   font-weight: 350;
   transition: color 0.3s ease;
 }
@@ -805,11 +810,15 @@ ul.ulsize{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 40px;
+    padding: 4px 40px;
     gap: 30px;
+    background-color: #141416;
     z-index: 10;
   }
-
+  #video-container .nav .item.toptop {
+    padding-block: 0;
+    line-height: 0.95;
+  }
   #video-container .logo-nav {
     width: 150px;
   }
@@ -847,32 +856,6 @@ ul.ulsize{
     margin-top: 8px;
     margin-left: 0;
   }
-
-  .welche {
-    max-width: 60vw;        /* текст не будет растягиваться на всю ширину */
-    padding-left: 10vh;     /* как и было на десктопе, но с ограничением ширины */
-    padding-top: 10px;      /* чуть больше воздуха сверху на больших экранах */
-    gap: 20px;
-  }
-
-  .lisSize {
-    font-size: 90px;        /* чуть меньше, чем 100px, чтобы не кричало на 27" мониторе */
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  .ulsize {
-    font-size: 26px;        /* комфортнее читать на больших экранах */
-    line-height: 1.4;
-  }
-
-  .btn {
-    font-size: 24px;
-    padding: 10px 36px;
-    margin-top: 12px;
-    margin-bottom: 0;
-  }
-  
 
   /* ===== СЕКЦИЯ "Warum Feuerwerke Lisius?" ===== */
   .section-below {
@@ -931,9 +914,9 @@ ul.ulsize{
   }
 
   #video-container .nav {
-    padding: 14px 36px;
+    padding: 7px 36px;
     gap: 22px;
-    
+    background-color: #141416;
   }
 
   #video-container .logo-nav {
@@ -1004,7 +987,7 @@ ul.ulsize{
   }
 
   #video-container .nav {
-    padding: 18px 70px;
+    padding: 6px 70px;
     gap: 30px;
      background-color: #141416;
   }
@@ -1038,23 +1021,6 @@ ul.ulsize{
   #video-container .cta-btn {
     width: min(340px, 24vw);
     font-size: clamp(36px, 1.8vw, 42px);
-  }
-
-  .lisSize{
-    font-size: 96px;
-    line-height: 1.1;
-  }
-
-  .ulsize{
-    font-size: 30px;
-    line-height: 1.45;
-  }
-
-  .btn{
-    font-size: 28px;
-    padding: 12px 44px;
-    margin-left: 0;
-    width: auto;
   }
 
   /* Секция под видео */
@@ -1095,7 +1061,7 @@ ul.ulsize{
 /* ==========================
    🖥 2K — 2560x1440
    ========================== */
-@media (min-width: 2560px) and (min-height: 1440px) {
+@media (min-width: 2101px) and (min-height: 3000px) {
 #video-container {
     padding-top: 130px;
     height: 100vh;
@@ -1103,7 +1069,7 @@ ul.ulsize{
   }
 
   #video-container .nav {
-    padding: 22px 90px;
+    padding: 7px 90px;
     gap: 38px;
     flex-wrap: nowrap;
    
@@ -1151,24 +1117,6 @@ ul.ulsize{
   font-size: 27px!important;
   line-height: 1.45;
 }
-.ulsize{
-  font-weight: 350;
-  color: white;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* отдельно список (и li унаследуют) */
-ul.ulsize{
-  font-size: 60px !important;
-}
-  .cta-btn{
-    font-size: 40px;
-    padding: 14px 52px;
-    margin-left: 0;
-    width: auto;
-  }
 
   /* Секция под видео */
   .section-below{
