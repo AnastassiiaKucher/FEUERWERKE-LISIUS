@@ -8,20 +8,25 @@ body {
   font-weight: 350;
   overflow-x: hidden;
   box-sizing: border-box; 
+  padding-top: 100px;
 }
 *, *::before, *::after {
   box-sizing: inherit;
 }
-/* ===== НАВИГАЦИЯ ===== */
+/* ===== НАВИГАЦИЯ (1-в-1 как BLOG) ===== */
 .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 24px;
-  padding: 2px 40px;
+  gap: 30px;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 2;
+  background-color: #141416;
+  z-index: 10;
 }
 
 .first {
@@ -30,20 +35,17 @@ body {
   align-items: center;
 }
 
-.logo-nav {
-    width: clamp(100px, 45%, 140px);
-    height:auto;
-    display:block;
+.lis {
+  width: 150px;
+  height: auto;
+  display: block;
 }
+
 .item {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
-    line-height: 1;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
   font-weight: 350;
   transition: color 0.3s ease;
 }
@@ -365,6 +367,33 @@ ul.ulsize{
   height: auto;
   display: block;
 }
+/* ===== NAV как в BLOG на мобилке ===== */
+@media (max-width: 900px) {
+  body {
+    padding-top: 140px;
+  }
+
+  .nav {
+    padding: 10px 14px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .lis {
+    width: 120px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+}
+
 /* ==========================
    📱 Мобильные устройства (до 480px)
    ========================== */
@@ -372,100 +401,23 @@ ul.ulsize{
   html, body {
     overflow-x: hidden;
   }
-  /* === Навигация: 2 ссылки в ряд, по центру === */
-  .nav{
-    display:grid;
-    grid-template-columns: repeat(2, minmax(120px,1fr));
-    justify-items:center;
-    align-items:center;
-    gap:15px 16px;
-    padding:30px 16px;          /* меньше отступ сверху */
-    text-align:center;
-  }
-
-  /* Логотип – отдельной строкой сверху */
-  .nav .first{
-    grid-column:1 / -1;
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-  }
-
-  .logo-nav{
-    width: clamp(120px, 55%, 170px);
-    height:auto;
-    display:block;
-  }
-
-  /* Ссылки навигации */
-  .nav .item.toptop{
-    font-size:22px;
-    padding:4px 8px;
-    width:100%;
-    justify-self:center;
-    text-align:center;
-    white-space:nowrap;
-  }
 
   .nav-links{ display: contents; }
 
-  /* ===== Видеоблок и главный текст ===== */
-  #video-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;             
-    padding: 0 16px 10px;     
-    padding-top: 12px;
-    overflow: hidden;
-  }
-
-  .welche{
-      position:static !important;
-      padding:0 !important;
-      max-width:94vw;
-      text-align:center;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-       margin-top: 8px;      
-       margin-bottom: 8px; 
-      gap:16px;
-      z-index:1;
+  .welche{  
+    padding:0 !important;
+    align-items:center;
   }
   .lisSize{
-    font-size:clamp(30px, 8vw, 42px);
-    line-height:1.15;
+    font-size:clamp(35px, 8vw, 42px);
     margin:0;
   }
-
-  .animated-text{ width:100%; }
-
   .ulsize{
-    list-style:none;
-    padding:0;
-    margin:0;
-    font-size:clamp(16px, 4vw, 20px);
-    line-height:1.45;
     text-align:center;
   }
 
   /* ===== Блок "Warum Feuerwerke Lisius?" ===== */
-  .section-below {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #141416;
-    padding: 24px 20px;         
-    gap: 18px;
-  }
-
+  
   .fire {
     width: clamp(60px, 20vw, 90px);
     height: auto;
@@ -615,33 +567,31 @@ ul.ulsize{
 /* ==========================
    📱💻 Планшеты (481px – 1024px)
    ========================== */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1200px) {
 
   html, body {
     overflow-x: hidden;
   }
 
   /* ===== НАВИГАЦИЯ НА ПЛАНШЕТАХ ===== */
+ 
+  /* NAV */
   .nav {
-    padding: 20px 32px;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    padding: 14px 28px;
+    gap: 18px;
   }
 
-  .first {
-    margin-right: auto;
-  }
-
-  .logo-nav {
-    width: 140px;
-    height: auto;
+  .lis {
+    width: 135px;
   }
 
   .item {
-    font-size: 22px; /* меньше, чем 30px на десктопе */
+    font-size: 18px;
   }
 
+  body {
+    padding-top: 110px;
+  }
   /* ===== ВИДЕО И ГЛАВНЫЙ ТЕКСТ ===== */
   #video-container {
     height: auto;
@@ -730,118 +680,9 @@ ul.ulsize{
 }
 
 /* ==========================
-   🖥 Большие экраны (от 1025px)
-   ========================== */
-@media (min-width: 1025px) and (max-width: 1279px){
-
-  /* ===== ГЛАВНЫЙ ТЕКСТ НА ФОНЕ ВИДЕО ===== */
-
- #video-container {
-    height: 100vh;
-  }
-
-  #video-container .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 40px;
-    min-height: 58px;
-    gap: 18px;
-    background-color: #141416;
-    z-index: 10;
-  }
-  #video-container .logo-nav {
-    height: auto;
-    height: 42px;
-  }
-
-  #video-container .nav .item {
-    font-size: 26px;
-    line-height: 1;
-  }
-
-  #video-container .welche {
-    padding-top: 20px;
-    padding-left: 6vw;
-    max-width: 58vw;
-    gap: 16px;
-  }
-
-  #video-container .lisSize {
-    font-size: clamp(70px, 5vw, 88px);
-    line-height: 1.05;
-  }
-
-  #video-container h2.ulsize {
-    font-size: clamp(44px, 3vw, 54px);
-    margin-bottom: 2px;
-  }
-
-  #video-container ul.ulsize {
-    font-size: clamp(34px, 2.2vw, 44px);
-    line-height: 1.33;
-  }
-
-  #video-container .cta-btn {
-    width: min(330px, 30vw);
-    font-size: clamp(30px, 1.9vw, 40px);
-    padding: 8px 24px;
-    margin-top: 8px;
-    margin-left: 0;
-  }
-
-  /* ===== СЕКЦИЯ "Warum Feuerwerke Lisius?" ===== */
-  .section-below {
-    padding: 70px 14vw;     /* немного больше воздуха и уже поле текста */
-  }
-
-  .section-below .lisSize {
-    font-size: 70px;
-    margin-bottom: 24px;
-  }
-
-  .reasons {
-    max-width: 650px;
-  }
-
-  .reason-title {
-    font-size: 20px;
-  }
-
-  .reason-text {
-    font-size: 17px;
-  }
-
-  /* ===== КАРУСЕЛЬ НА БОЛЬШИХ ЭКРАНАХ ===== */
-  .section-below2 {
-    padding: 50px 0 80px;
-  }
-
-  .section-below2 .carousel {
-    max-width: 900px;       /* оставляем аккуратный размер по центру */
-    margin: 0 auto;
-  }
-
-  #carouselExampleCaptions .carousel-item img {
-    border-radius: 8px;
-  }
-
-  /* ===== ФУТЕР НА БОЛЬШИХ ЭКРАНАХ ===== */
-  .footer {
-    padding: 50px 12vw;
-  }
-
-  .footer-bottom {
-    gap: 20px;
-  }
-}
-
-
-/* ==========================
    🖥 HD — 1280x720
    ========================== */
-@media (min-width: 1280px) and (max-width: 1919px) {
+@media (min-width: 1201px) and (max-width: 1366px) {
 #video-container {
     height: 100vh;
   }
@@ -920,55 +761,25 @@ width: 150px;
 /* ==========================
    🖥 FHD — 1920x1080
    ========================== */
-@media (min-width: 1920px) and (max-width: 3839px) {
-
-  #video-container {
-    height: 100vh;
+@media (min-width: 1681px) and (max-width: 2100px) {
+body {
+    padding-top: 110px;
   }
 
-  #video-container .nav {
-      position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 40px;
-    min-height: 60px;
-    gap: 20px;
-    background-color: #141416;
-     z-index: 10;
+  /* NAV */
+  .nav {
+    padding: 18px 60px;
+    gap: 30px;
   }
 
-  #video-container .logo-nav {
-     width: 150px;
-    height: auto;
+  .lis {
+    width: 160px;
   }
 
-  #video-container .nav .item {
-    font-size: 30px;
+  .item {
+    font-size: 26px;
   }
 
-  #video-container .welche {
-    padding-top: 50px;
-    max-width: 52vw;
-    gap: 16px;
-  }
-
-  #video-container .lisSize {
-    font-size: clamp(82px, 4.6vw, 96px);
-  }
-
-  #video-container h2.ulsize {
-    font-size: clamp(48px, 2.8vw, 58px);
-  }
-
-  #video-container ul.ulsize {
-    font-size: clamp(38px, 2.1vw, 46px);
-  }
-
-  #video-container .cta-btn {
-    width: min(340px, 24vw);
-    font-size: clamp(36px, 1.8vw, 42px);
-  }
 
   /* Секция под видео */
   .section-below{
@@ -1005,10 +816,34 @@ width: 150px;
   }
 }
 
+/* ===== 2K / 2560x1440 ===== */
+@media (min-width: 2101px) and (max-width: 3000px){
+
+   /* ===== BODY ===== */
+  body {
+    padding-top: 135px;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .nav {
+    padding: 22px 90px;
+    gap: 38px;
+    flex-wrap: nowrap;
+  }
+
+  .lis {
+    width: 185px;
+  }
+
+  .item {
+    font-size: 30px;
+  }
+}
+
 /* ==========================
    🖥 4K — 3840x2160
    ========================== */
-@media (min-width: 3840px) {
+@media (min-width: 3001px) {
 #video-container {
     height: 100vh;
   }
