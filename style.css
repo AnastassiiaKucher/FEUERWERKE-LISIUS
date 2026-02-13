@@ -18,10 +18,9 @@ body {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 6px 40px;
+  gap: 24px;
+  padding: 2px 40px;
   width: 100%;
-
   z-index: 2;
 }
 
@@ -32,7 +31,7 @@ body {
 }
 
 .logo-nav {
-    width: clamp(120px, 55%, 170px);
+    width: clamp(100px, 45%, 140px);
     height:auto;
     display:block;
 }
@@ -746,21 +745,20 @@ ul.ulsize{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4px 40px;
-    gap: 30px;
+    padding: 15px 40px;
+    min-height: 58px;
+    gap: 18px;
     background-color: #141416;
     z-index: 10;
   }
-  #video-container .nav .item.toptop {
-    padding-block: 0;
-    line-height: 0.95;
-  }
   #video-container .logo-nav {
-    width: 150px;
+    height: auto;
+    height: 42px;
   }
 
   #video-container .nav .item {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 1;
   }
 
   #video-container .welche {
@@ -848,18 +846,25 @@ ul.ulsize{
     height: 100vh;
   }
 
-  #video-container .nav {
-    padding: 7px 36px;
-    gap: 22px;
+  #video-container .nav { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    gap: 30px;
     background-color: #141416;
+    z-index: 10;
   }
 
   #video-container .logo-nav {
-    width: 140px;
+width: 150px;
+    height: auto;
   }
 
   #video-container .nav .item {
-    font-size: 24px;
+        font-size: 30px;
+    line-height: 1;
   }
 
   #video-container .welche {
@@ -922,13 +927,20 @@ ul.ulsize{
   }
 
   #video-container .nav {
-    padding: 6px 70px;
-    gap: 30px;
-     background-color: #141416;
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    min-height: 60px;
+    gap: 20px;
+    background-color: #141416;
+     z-index: 10;
   }
 
   #video-container .logo-nav {
-    width: 170px;
+     width: 150px;
+    height: auto;
   }
 
   #video-container .nav .item {
