@@ -403,7 +403,9 @@ ul.ulsize{
    📱 Мобильные устройства (до 480px)
    ========================== */
 @media (max-width: 480px) {
-
+  html, body {
+    overflow-x: hidden;
+  }
   /* === Навигация: 2 ссылки в ряд, по центру === */
   .nav{
     display:grid;
@@ -458,9 +460,8 @@ ul.ulsize{
   .welche{
       position:static !important;
       padding:0 !important;
-      max-width:92vw;
+      max-width:94vw;
       text-align:center;
-
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -473,6 +474,8 @@ ul.ulsize{
   .lisSize{
     font-size:clamp(34px, 9vw, 46px);
     line-height:1.2;
+    font-size:clamp(30px, 8vw, 42px);
+    line-height:1.15;
     margin:0;
   }
 
