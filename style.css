@@ -406,8 +406,6 @@ ul.ulsize{
     overflow-x: hidden;
   }
 
-  .nav-links{ display: contents; }
-
   .welche{  
     padding:0 !important;
     align-items:center;
@@ -416,8 +414,9 @@ ul.ulsize{
     font-size:clamp(35px, 8vw, 42px);
     margin:0;
   }
-  .ulsize{
+  h2.ulsize{
     text-align:center;
+    font-size: 20px;
   }
 
   /* ===== Блок "Warum Feuerwerke Lisius?" ===== */
