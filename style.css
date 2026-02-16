@@ -403,9 +403,8 @@ ul.ulsize{
   .welche{  
     align-items:center;      /* центр по горизонтали */
   justify-content:center;
-
+  padding-left: 0;
   text-align:center;       /* текст по центру */
-
   margin:0 auto;
   }
   .lisSize{
@@ -418,6 +417,7 @@ ul.ulsize{
   }
   ul.ulsize{
     font-size: 20px;
+    padding-left: 0;
   }
 
   /* ===== Блок "Warum Feuerwerke Lisius?" ===== */

@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
-  padding-top: 60px;
+  
 }
 /* Общий box-sizing */
 *,
@@ -418,29 +418,13 @@ textarea {
 @media (max-width: 480px) {
 
   body {
-    padding-top: 70px;
-  }
-
-  /* ===== НАВИГАЦИЯ ===== */
-
-  .nav {
-    padding: 8px 10px;
-    gap: 6px;
-  }
-
-  .first {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .lis {
-    width: 90px;
+    padding-top: 100px;
   }
 
   .item {
-    font-size: 12px;
-    padding: 4px 6px;
+    font-size: 14px;
   }
+
 
   /* ===== MAIN ===== */
 
@@ -495,6 +479,101 @@ textarea {
 
   .contact-info h2 {
     font-size: 22px;
+  }
+  .centr{
+  padding-bottom: 20px; 
+  }
+  
+  /* ===== Футер (как был, только оставляем) ===== */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a1d;
+    color: white;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .footer-column {
+    flex: none;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  .footer-column h3 {
+    color: #fdc367;
+    font-size: clamp(18px, 5vw, 22px);
+    margin-bottom: 6px;
+  }
+
+  .footer-column p {
+    font-size: clamp(14px, 3.5vw, 17px);
+    margin: 4px 0;
+  }
+
+  .footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-socials a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .footer-links a {
+    color: white;
+    font-size: clamp(14px, 4vw, 16px);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: #fdc367;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    height: clamp(50px, 10vw, 80px);
+    width: auto;
   }
 }
 /* =========================
