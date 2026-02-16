@@ -118,18 +118,6 @@ ul.ulsize{
   font-size: 40px;
 }
 
-/* ===== АНИМАЦИЯ ===== */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .animated-text {
   animation: slideInLeft 1.6s ease-out forwards;
 }
@@ -367,10 +355,16 @@ ul.ulsize{
 }
 
 .footer-logo img {
- width: 300px;
-  height: auto;
-  display: block;
+  height: 50px;
+  max-height: 80px;
+  width: auto;
 }
+
+/* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
+.nav a:hover {
+  color: #fdc367;
+}
+
 /* ===== NAV как в BLOG на мобилке ===== */
 @media (max-width: 900px) {
   body {
@@ -407,8 +401,12 @@ ul.ulsize{
   }
 
   .welche{  
-    padding:0 !important;
-    align-items:center;
+    align-items:center;      /* центр по горизонтали */
+  justify-content:center;
+
+  text-align:center;       /* текст по центру */
+
+  margin:0 auto;
   }
   .lisSize{
     font-size:clamp(35px, 8vw, 42px);
@@ -416,6 +414,9 @@ ul.ulsize{
   }
   h2.ulsize{
     text-align:center;
+    font-size: 25px;
+  }
+  ul.ulsize{
     font-size: 20px;
   }
 
