@@ -396,13 +396,19 @@ ul.ulsize{
 /* ==========================
    📱 Мобильные устройства (до 480px)
    ========================== */
+
 @media (max-width: 480px) {
+  #video-container {
+    height: auto;          /* ← ключевое: убираем фиксированную высоту */
+    min-height: 0; 
+    padding-top: 1px;
+     padding-bottom: 18px;
+}
   html, body {
     overflow-x: hidden;
   }
-
   .welche{  
-    align-items:center;      /* центр по горизонтали */
+  align-items:center;      /* центр по горизонтали */
   justify-content:center;
   padding-left: 0;
   text-align:center;       /* текст по центру */
