@@ -392,6 +392,7 @@ textarea {
   .contact-form {
     padding: 25px;
     gap: 18px;
+    padding-top: 7%;
   }
 
   .contact-form h2 {

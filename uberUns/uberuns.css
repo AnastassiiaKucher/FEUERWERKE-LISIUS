@@ -239,11 +239,17 @@ body {
 
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 900px) {
-  /* Навигация */
+  
   .nav {
-   padding: 10px 14px;
-   gap: 10px;
-   justify-content: space-between;
+    padding: 10px 14px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .first {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
   }
 
   .lis {
@@ -251,7 +257,7 @@ body {
   }
 
   .item {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   /* Секции "О нас" — в одну колонку */
@@ -286,6 +292,7 @@ body {
   .text-block h1,
   .text-block h2 {
     font-size: 32px;
+    padding-top: 4%;
   }
 
   .text-block p {
@@ -414,69 +421,7 @@ body {
   }
 }
 
-/* ===== ПЛАНШЕТ (iPad) ===== */
-@media (min-width: 901px) and (max-width: 1200px) {
 
-  /* Навигация */
-  .nav {
-    padding: 14px 30px;
-    gap: 20px;
-  }
-
-  .lis {
-    width: 130px;
-  }
-
-  .item {
-    font-size: 20px;
-  }
-
-  /* Секции */
-  .about-section {
-    flex-direction: row;
-    gap: 40px;
-    padding: 80px 6%;
-    margin-top: 10vh;
-  }
-
-  .about-section.left-image {
-    flex-direction: row;
-  }
-
-  .about-section.right-image {
-    flex-direction: row-reverse;
-  }
-
-  .image-block,
-  .text-block {
-    flex: 1 1 45%;
-  }
-
-  .text-block {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  /* Текст */
-  .text-block h1,
-  .text-block h2 {
-    font-size: 46px;
-  }
-
-  .text-block p {
-    font-size: 20px;
-  }
-
-  .image-block img {
-    max-width: 100%;
-  }
-
-  /* Футер */
-  .footer {
-    font-size: 16px;
-    padding: 25px 0;
-  }
-}
 
 /* ===== HD 1280x720 (и близкие) ===== */
 @media (min-width: 1201px) and (max-width: 1366px) {

@@ -13,42 +13,37 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/index.html</loc>
-  <lastmod>2026-02-18T21:21:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://feuerwerke-lisius.de/uberUns/uberuns.html</loc>
+  <loc>https://feuerwerke-lisius.de/uberUns</loc>
   <lastmod>2026-02-18T21:21:58+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/blog/blog.html</loc>
+  <loc>https://feuerwerke-lisius.de/blog</loc>
   <lastmod>2026-02-18T21:23:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/referenzen/referenzen.html</loc>
+  <loc>https://feuerwerke-lisius.de/referenzen</loc>
   <lastmod>2026-02-18T21:22:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/Kontakt/kontakt.html</loc>
+  <loc>https://feuerwerke-lisius.de/Kontakt</loc>
   <lastmod>2026-02-18T21:22:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/impressum.html</loc>
+  <loc>https://feuerwerke-lisius.de/impressum</loc>
   <lastmod>2026-02-18T21:21:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/datenschutz.html</loc>
+  <loc>https://feuerwerke-lisius.de/datenschutz</loc>
   <lastmod>2026-02-18T21:21:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://feuerwerke-lisius.de/blog/abbrennplatz.html</loc>
+  <loc>https://feuerwerke-lisius.de/blog/abbrennplatz</loc>
   <lastmod>2026-02-18T21:23:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>

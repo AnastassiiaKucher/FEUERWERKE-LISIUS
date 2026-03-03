@@ -1,10 +1,53 @@
-RewriteEngine On
+# Browser-Caching für statische Dateien
+<IfModule mod_expires.c>
+  ExpiresActive On
+    # Bilder & Icons (inkl. Favicon)
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+    # CSS & JavaScript
+  ExpiresByType text/css "access plus 6 months"
+  ExpiresByType application/javascript "access plus 6 months"
+  ExpiresByType text/javascript "access plus 6 months"
 
-# Показывать страницу без .html
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+  # Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
 
-# Убирать .html из URL (редирект)
-RewriteCond %{THE_REQUEST} \s/([^.]+)\.html
-RewriteRule ^ /%1 [R=301,L]
+# Fallback Cache-Control Header
+<IfModule mod_headers.c>
+  <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico|css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Schöne URLs ohne .html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Канонические адреса для основных страниц разделов
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^referenzen/referenzen\.html$ /referenzen [R=301,L]
+  RewriteRule ^Kontakt/kontakt\.html$ /Kontakt [R=301,L]
+  RewriteRule ^uberUns/uberuns\.html$ /uberUns [R=301,L]
+  RewriteRule ^blog/blog\.html$ /blog [R=301,L]
+
+  # Для остальных страниц удаляем расширение .html в URL
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # Внутренняя подстановка: /page -> /page.html (если такой файл существует)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # Маршруты для разделов с landing-страницами внутри папок
+  RewriteRule ^referenzen/?$ referenzen/referenzen.html [L]
+  RewriteRule ^Kontakt/?$ Kontakt/kontakt.html [L]
+  RewriteRule ^uberUns/?$ uberUns/uberuns.html [L]
+  RewriteRule ^blog/?$ blog/blog.html [L]
+</IfModule>
