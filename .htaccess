@@ -26,30 +26,6 @@
   </FilesMatch>
 </IfModule>
 
-# Schöne URLs ohne .html (ohne Redirect-Loops)
-<IfModule mod_rewrite.c>
-  RewriteEngine On
+RewriteEngine On
 
-  # 0) Базовая защита: не трогаем реальные файлы и папки
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # 1) index.html -> /
-  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
-  RewriteRule ^index\.html$ / [R=301,L]
-
-  # 2) Убираем .html только если .html запросили в браузере
-  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-  RewriteRule ^ %1 [R=301,L]
-
-  # 3) Маршруты для разделов с landing-страницами внутри папок
-  RewriteRule ^referenzen/?$ referenzen/referenzen.html [L]
-  RewriteRule ^Kontakt/?$ Kontakt/kontakt.html [L]
-  RewriteRule ^uberUns/?$ uberUns/uberuns.html [L]
-  RewriteRule ^blog/?$ blog/blog.html [L]
-
-  # 4) Внутренняя подстановка: /page -> /page.html (если такой файл существует)
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.+?)/?$ $1.html [L]
-</IfModule>
+RewriteRule ^referenzen/?$ referenzen/referenzen.html [L]
