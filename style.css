@@ -101,7 +101,7 @@ body {
   font-size: 100px;
   margin: 0;
 }
-.text{
+.text {
   font-size: 30px;
 }
 .ulsize {
@@ -166,6 +166,18 @@ ul.ulsize {
   box-sizing: border-box;
   gap: 25px;
 }
+.popUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #141416;
+  padding: 170px 10vw;
+  color: #f5f5f5;
+  text-align: center;
+  box-sizing: border-box;
+  gap: 25px;
+}
 
 /* 🔥 Иконка огня */
 .fire {
@@ -182,6 +194,17 @@ ul.ulsize {
   font-size: 80px;
   margin: 10px 0 25px 0;
 }
+/* back link */
+.backline{ margin-top:20px; }
+.back{
+ 
+  color:#fdc367;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.back:hover{ color:#fff; text-decoration:underline; }
 
 /* 💬 Контейнер причин */
 .reasons {
@@ -200,7 +223,7 @@ ul.ulsize {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   width: 100%;
   gap: 8px;
 }
@@ -383,7 +406,7 @@ ul.ulsize {
     padding: 10px 14px;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;          /* 🔥 важно: перенос строк */
+    flex-wrap: wrap; /* 🔥 важно: перенос строк */
   }
 
   .first {
@@ -419,6 +442,9 @@ ul.ulsize {
   .lisSize {
     font-size: clamp(35px, 8vw, 42px);
     margin: 0;
+  }
+  .popUp {
+    padding: 30px 10vw;
   }
   h2.ulsize {
     text-align: center;
@@ -621,6 +647,9 @@ ul.ulsize {
   }
   .section-below .lisSize {
     font-size: 50px;
+  }
+  .popUp {
+    padding: 40px 10vw;
   }
   html,
   body {
