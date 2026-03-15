@@ -11,7 +11,9 @@ body {
   padding-top: 100px; /* чтобы контент не перекрывался навигацией */
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -50,6 +52,15 @@ body {
   font-size: 30px;
   font-weight: 350;
   transition: color 0.3s ease;
+}
+.insteadOfLogo {
+  color: #ffc063;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 350;
+  transition: color 0.3s ease;
+  font-style: bold;
 }
 
 .item:hover,
@@ -101,14 +112,15 @@ body {
   width: 360px;
   overflow: hidden;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .blog-card-link {
   text-decoration: none;
   color: inherit;
   display: inline-block;
 }
-
 
 .blog-card:hover {
   transform: translateY(-6px);
@@ -135,7 +147,6 @@ body {
   border-radius: 8px;
   font-weight: 600;
 }
-
 
 .blog-date {
   align-self: flex-end;
@@ -191,7 +202,7 @@ body {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -200,8 +211,8 @@ body {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-   align-items: center;    
-  text-align: center; 
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 
@@ -299,10 +310,8 @@ body {
   color: #fdc367;
 }
 
-
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (телефоны) ===== */
 @media (max-width: 900px) {
-
   body {
     padding-top: 140px;
   }
@@ -384,14 +393,13 @@ body {
   /* Футер чуть компактнее */
   .footer {
     font-size: 14px;
-    
+
     text-align: center;
   }
 }
 
 /* ===== СОВСЕМ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ===== */
 @media (max-width: 480px) {
-
   body {
     padding-top: 100px;
   }
@@ -415,7 +423,7 @@ body {
   .blog-card {
     border-radius: 12px;
   }
-  
+
   /* ===== Футер (как был, только оставляем) ===== */
   .footer {
     display: flex;
@@ -504,14 +512,13 @@ body {
   }
 
   .footer-logo img {
-    height: clamp(50px, 10vw, 80px);
+    height: 100px;
     width: auto;
   }
 }
 
 /* ===== ПЛАНШЕТЫ / iPad ===== */
 @media (min-width: 901px) and (max-width: 1200px) {
-
   /* NAV */
   .nav {
     padding: 14px 28px;
@@ -573,16 +580,14 @@ body {
     font-size: 16px;
     margin: 0 18px 20px;
   }
-   /* Футер */
+  /* Футер */
   .footer {
     font-size: 16px;
-    
   }
 }
 
 /* ===== HD / 1280x720 ===== */
 @media (min-width: 1201px) and (max-width: 1366px) {
-
   /* BODY */
   body {
     padding-top: 100px;
@@ -654,7 +659,6 @@ body {
 
 /* ===== FHD / 1920x1080 ===== */
 @media (min-width: 1681px) and (max-width: 2100px) {
-
   body {
     padding-top: 110px;
   }
@@ -696,7 +700,7 @@ body {
 
   /* CARDS */
   .blog-card {
-    width: 380px;  /* красиво для 1920 */
+    width: 380px; /* красиво для 1920 */
   }
 
   .blog-img {
@@ -738,8 +742,7 @@ body {
 
 /* ===== 2K / 2560x1440 ===== */
 @media (min-width: 2101px) and (max-width: 3000px) {
-
-   /* ===== BODY ===== */
+  /* ===== BODY ===== */
   body {
     padding-top: 135px;
   }
@@ -760,7 +763,7 @@ body {
   }
   /* BLOG SECTION */
   .blog-section {
-    max-width: 2000px;      /* ключевой момент */
+    max-width: 2000px; /* ключевой момент */
     padding: 100px 60px;
     gap: 90px;
   }
@@ -781,7 +784,7 @@ body {
 
   /* CARDS */
   .blog-card {
-    width: 500px;           /* 3–4 карточки в ряд */
+    width: 500px; /* 3–4 карточки в ряд */
   }
 
   .blog-img {
@@ -821,7 +824,9 @@ body {
   }
 
   .footer-logo img {
-    max-height: 110px;
+    width: 300px;
+    height: auto;
+    display: block;
   }
 
   .footer-links a,
@@ -832,7 +837,8 @@ body {
 
 /* ===== 4K / 3840x2160 ===== */
 @media (min-width: 3001px) {
-html, body {
+  html,
+  body {
     height: 100%;
   }
 
@@ -841,7 +847,6 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-
 
   /* NAV */
   .nav {
@@ -860,8 +865,8 @@ html, body {
 
   /* BLOG SECTION */
   .blog-section {
-      flex: 1 0 auto;
-    max-width: 3000px;     /* жёсткое ограничение */
+    flex: 1 0 auto;
+    max-width: 3000px; /* жёсткое ограничение */
     padding: 120px 80px;
     gap: 56px;
   }
@@ -882,7 +887,7 @@ html, body {
 
   /* CARDS */
   .blog-card {
-    width: 600px;          /* 4 карточки выглядят идеально */
+    width: 600px; /* 4 карточки выглядят идеально */
   }
 
   .blog-img {
@@ -916,12 +921,12 @@ html, body {
     margin: 0 24px 30px;
   }
 
-/* ===== FOOTER: как на 2K, но на 4K ===== */
+  /* ===== FOOTER: как на 2K, но на 4K ===== */
   .footer {
     width: 100%;
-    max-width: none;          /* 🔑 КЛЮЧЕВОЕ */
+    max-width: none; /* 🔑 КЛЮЧЕВОЕ */
     margin: 0;
-    padding: 70px 140px;      /* такие же ощущения, как на 2K */
+    padding: 70px 140px; /* такие же ощущения, как на 2K */
     gap: 40px;
   }
 
@@ -970,5 +975,4 @@ html, body {
   .footer-logo img {
     max-height: 120px;
   }
-
 }

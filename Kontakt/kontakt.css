@@ -6,17 +6,15 @@ body {
   color: #f5f5f5;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 350;
- 
+
   overflow-x: hidden;
   box-sizing: border-box;
   padding-top: 100px;
-
 }
-.centr{
+.centr {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
-  
 }
 /* Общий box-sizing */
 *,
@@ -26,7 +24,7 @@ body {
 }
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -45,7 +43,15 @@ body {
   display: flex;
   align-items: center;
 }
-
+.insteadOfLogo {
+  color: #ffc063;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 350;
+  transition: color 0.3s ease;
+  font-style: bold;
+}
 .lis {
   width: 150px;
   height: auto;
@@ -53,7 +59,7 @@ body {
 }
 
 .item {
-   color: white;
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 30px;
@@ -65,7 +71,6 @@ body {
 .nav a.active {
   color: #fdc367;
 }
-
 
 .lis {
   width: 80%;
@@ -109,7 +114,6 @@ main {
   margin-bottom: 20px;
 }
 
-
 /* ===== ГРУППЫ ПОЛЕЙ ===== */
 .form-group {
   display: flex;
@@ -134,7 +138,9 @@ textarea {
   background-color: rgba(255, 255, 255, 0.08);
   color: white;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 input:focus,
@@ -184,7 +190,9 @@ textarea {
   padding: 14px 0;
   width: 100%;
   text-transform: uppercase;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
   align-self: center;
 }
 .submit-btn.success {
@@ -231,7 +239,6 @@ textarea {
   color: white;
 }
 
-
 /* ===== ФУТЕР ===== */
 .footer {
   display: flex;
@@ -248,7 +255,7 @@ textarea {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -257,8 +264,8 @@ textarea {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-   align-items: center;    
-  text-align: center; 
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 
@@ -356,7 +363,6 @@ textarea {
   color: #fdc367;
 }
 @media (max-width: 900px) {
-
   body {
     padding-top: 80px;
   }
@@ -427,7 +433,6 @@ textarea {
 }
 
 @media (max-width: 480px) {
-
   body {
     padding-top: 100px;
   }
@@ -435,7 +440,6 @@ textarea {
   .item {
     font-size: 14px;
   }
-
 
   /* ===== MAIN ===== */
 
@@ -491,10 +495,10 @@ textarea {
   .contact-info h2 {
     font-size: 22px;
   }
-  .centr{
-  padding-bottom: 20px; 
+  .centr {
+    padding-bottom: 20px;
   }
-  
+
   /* ===== Футер (как был, только оставляем) ===== */
   .footer {
     display: flex;
@@ -583,7 +587,7 @@ textarea {
   }
 
   .footer-logo img {
-    height: clamp(50px, 10vw, 80px);
+    height: 100px;
     width: auto;
   }
 }
@@ -591,13 +595,13 @@ textarea {
    2101px – 3000px (2K / large monitors)
    ========================= */
 @media (min-width: 2101px) and (max-width: 3000px) {
-  .fonty{
+  .fonty {
     font-size: 52px;
   }
-  label{
+  label {
     font-size: 27px;
   }
-   /* ===== BODY ===== */
+  /* ===== BODY ===== */
   body {
     padding-top: 135px;
   }
@@ -615,5 +619,10 @@ textarea {
 
   .item {
     font-size: 30px;
+  }
+  .footer-logo img {
+    width: 300px;
+    height: auto;
+    display: block;
   }
 }

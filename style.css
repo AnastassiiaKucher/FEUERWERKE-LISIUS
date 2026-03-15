@@ -53,7 +53,15 @@ body {
   font-weight: 350;
   transition: color 0.3s ease;
 }
-
+.insteadOfLogo {
+  color: #ffc063;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 350;
+  transition: color 0.3s ease;
+  font-style: bold;
+}
 .item:hover,
 .nav a.active {
   color: #fdc367;
@@ -63,7 +71,7 @@ body {
   position: relative;
   width: 100%;
   height: 75vh;
-  padding-top: 110px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -99,6 +107,12 @@ body {
   font-weight: 500;
   color: #fec260;
   font-size: 100px;
+  margin: 0;
+}
+.h1Topic {
+  font-weight: 500;
+  color: #fec260;
+  font-size: 70px;
   margin: 0;
 }
 .text {
@@ -195,16 +209,20 @@ ul.ulsize {
   margin: 10px 0 25px 0;
 }
 /* back link */
-.backline{ margin-top:20px; }
-.back{
- 
-  color:#fdc367;
-  font-weight:500;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
+.backline {
+  margin-top: 20px;
 }
-.back:hover{ color:#fff; text-decoration:underline; }
+.back {
+  color: #fdc367;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.back:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 
 /* 💬 Контейнер причин */
 .reasons {
@@ -255,7 +273,7 @@ ul.ulsize {
   overflow: hidden;
   opacity: 0;
   transition: all 0.4s ease;
-  font-size: 25px !important;
+  font-size: 25px;
   color: #e5e5e5;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
@@ -384,9 +402,7 @@ ul.ulsize {
 }
 
 .footer-logo img {
-  height: 50px;
-  max-height: 80px;
-  width: auto;
+  width: 100px;
 }
 
 /* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
@@ -399,7 +415,7 @@ ul.ulsize {
    ========================== */
 @media (max-width: 480px) {
   body {
-    padding-top: 140px; /* если у тебя фиксированная шапка */
+    padding-top: 120px;
   }
 
   .nav {
@@ -414,13 +430,18 @@ ul.ulsize {
     justify-content: center;
     margin-right: 0;
   }
-
+  .h1Topic {
+    font-size: 24px;
+  }
   .lis {
     width: 110px; /* можно 90-110, если тесно */
   }
 
   .item {
     font-size: 13px; /* можно 12, если не влезает */
+  }
+  .text {
+    font-size: 20px;
   }
   #video-container {
     height: auto;
@@ -489,7 +510,7 @@ ul.ulsize {
 
   .reason-title {
     width: 100%;
-    font-size: clamp(16px, 4vw, 20px);
+    font-size: 20px;
     padding: 10px 12px;
     border: 1.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -500,7 +521,7 @@ ul.ulsize {
   }
 
   .reason-text {
-    font-size: clamp(14px, 3.5vw, 17px);
+    font-size: 20px;
     color: #e5e5e5;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
@@ -511,6 +532,7 @@ ul.ulsize {
   }
   .cta-btn {
     font-size: 20px;
+    width: 300px;
   }
 
   .footer {
@@ -600,7 +622,7 @@ ul.ulsize {
   }
 
   .footer-logo img {
-    height: clamp(50px, 10vw, 80px);
+    height: 100px;
     width: auto;
   }
 }
@@ -612,9 +634,6 @@ ul.ulsize {
 @media (min-width: 481px) and (max-width: 1200px) {
   body {
     padding-top: 140px;
-  }
-  #video-container {
-    padding-top: 7%;
   }
   .nav {
     padding: 10px 14px;
@@ -635,6 +654,9 @@ ul.ulsize {
   .item {
     font-size: 14px;
   }
+  .h1Topic {
+    font-size: 50px;
+  }
 
   h2.lisSize {
     font-size: 70px;
@@ -644,6 +666,10 @@ ul.ulsize {
   }
   ul.ulsize {
     font-size: 40px;
+  }
+  .cta-btn {
+    width: 400px;
+    height: 100px;
   }
   .section-below .lisSize {
     font-size: 50px;
@@ -663,6 +689,95 @@ ul.ulsize {
   }
   #carouselExampleCaptions .carousel-control-next {
     right: 0 !important;
+  }
+  .footer-logo img {
+    height: 150px;
+    width: auto;
+  }
+    .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a1d;
+    color: white;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .footer-column {
+    flex: none;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  .footer-column h3 {
+    color: #fdc367;
+    font-size: clamp(18px, 5vw, 22px);
+    margin-bottom: 6px;
+  }
+
+  .footer-column p {
+    font-size: clamp(14px, 3.5vw, 17px);
+    margin: 4px 0;
+  }
+
+  .footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-socials a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .footer-links a {
+    color: white;
+    font-size: clamp(14px, 4vw, 16px);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: #fdc367;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -816,7 +931,7 @@ ul.ulsize {
 
   /* Button */
   .cta-btn {
-    width: 260px;
+    width: 300px;
     font-size: 22px;
     padding: 14px 20px;
     margin-left: 0;
@@ -847,7 +962,7 @@ ul.ulsize {
   }
 
   .footer-logo img {
-    width: 200px;
+    width: 300px;
     height: auto;
     display: block;
   }
@@ -876,6 +991,11 @@ ul.ulsize {
   }
   ul.ulsize {
     line-height: 2;
+  }
+  .footer-logo img {
+    width: 300px;
+    height: auto;
+    display: block;
   }
 }
 /* ==========================

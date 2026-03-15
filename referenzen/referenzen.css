@@ -8,9 +8,11 @@ body {
   font-weight: 350;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding-top: 100px; 
+  padding-top: 100px;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 /* ===== НАВИГАЦИЯ ===== */
@@ -45,6 +47,15 @@ body {
   font-size: 30px;
   font-weight: 350;
   transition: color 0.3s ease;
+}
+.insteadOfLogo {
+  color: #ffc063;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 350;
+  transition: color 0.3s ease;
+  font-style: bold;
 }
 .item:hover,
 .nav a.active {
@@ -95,7 +106,9 @@ body {
   padding: 25px;
   flex: 1 1 360px;
   max-width: 480px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   text-align: left;
 }
 
@@ -112,18 +125,17 @@ body {
 }
 
 .project p {
-   font-size: 20px;
+  font-size: 20px;
   color: #eaeaea;
   line-height: 1.5;
   margin: 0 0 20px 0;
-  flex-grow: 1; 
-
+  flex-grow: 1;
 }
 
 .project iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;          /* важно */
+  height: auto; /* важно */
   border: none;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -183,7 +195,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 25px;
-  
+
   margin-bottom: 20px;
 }
 
@@ -195,7 +207,10 @@ body {
   font-size: 25px;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .reviews-btn:hover {
@@ -283,11 +298,10 @@ body {
   gap: 40px;
   width: 100%;
   max-width: 1100px;
-  margin-top: -20px; 
+  margin-top: -20px;
   flex-wrap: wrap;
   position: relative;
 }
-
 
 .clients .client:nth-child(1) {
   align-self: flex-start;
@@ -351,7 +365,7 @@ body {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -360,8 +374,8 @@ body {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-   align-items: center;    
-  text-align: center; 
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 
@@ -459,13 +473,10 @@ body {
   color: #fdc367;
 }
 
-
 /* =========================
    <= 900px (tablet + phones)
    ========================= */
 @media (max-width: 900px) {
- 
-
   .nav {
     padding: 10px 14px;
     gap: 10px;
@@ -487,109 +498,117 @@ body {
   }
 
   /* ---------- REFERENCES ---------- */
-  .references{
-       max-width: 100%;
+  .references {
+    max-width: 100%;
     margin: 30px auto 40px auto; /* под фиксированный nav */
     padding: 0 16px;
     gap: 26px;
   }
-  .references h1{
-     font-size: clamp(30px, 8vw, 44px);
+  .references h1 {
+    font-size: clamp(30px, 8vw, 44px);
     margin-top: 5%;
   }
-  .references .intro{
-  font-size: 16px;
+  .references .intro {
+    font-size: 16px;
     line-height: 1.6;
-    max-width: 60ch; 
+    max-width: 60ch;
   }
 
   /* ---------- PROJECTS ---------- */
-  .projects{
-     width: 100%;
+  .projects {
+    width: 100%;
     gap: 16px;
   }
-  .project{
+  .project {
     flex: 1 1 100%;
     max-width: 700px;
     padding: 18px;
   }
-  .project h2{ font-size: 22px; }
-  .project p{ font-size: 17px; }
+  .project h2 {
+    font-size: 22px;
+  }
+  .project p {
+    font-size: 17px;
+  }
 
   /* video responsive */
-  .project iframe{
+  .project iframe {
     height: auto;
     aspect-ratio: 16 / 9;
   }
 
   /* ---------- REVIEWS ---------- */
-  .reviews-section{
+  .reviews-section {
     padding: 70px 18px;
     gap: 35px;
   }
-  .reviews-title h2{
+  .reviews-title h2 {
     font-size: 25px;
     line-height: 1.2;
   }
-  .reviews-subtitle{
+  .reviews-subtitle {
     font-size: 20px;
-     padding: 20px;
-    
+    padding: 20px;
   }
 
-  .review-slide{
+  .review-slide {
     gap: 26px;
     padding: 0 18px;
   }
 
-  .boxes{
+  .boxes {
     gap: 18px;
   }
 
   /* ключевое: убираем min-width 320px, чтобы не ломало на узких */
-  .box{
+  .box {
     flex: 1 1 100%;
     min-width: 0;
     max-width: 100%;
   }
-  .box-yellow, .box-grey{
+  .box-yellow,
+  .box-grey {
     padding: 22px;
     font-size: 16px;
     min-height: auto;
   }
 
-  .clients{
+  .clients {
     gap: 18px;
     margin-top: 0;
   }
-  .client{
+  .client {
     flex: 1 1 100%;
     min-width: 0;
     max-width: 100%;
     justify-content: flex-start;
   }
-  .client img{
+  .client img {
     width: 64px;
     height: 64px;
   }
-  .client-info strong{ font-size: 16px; }
-  .client-info span{ font-size: 14px; }
+  .client-info strong {
+    font-size: 16px;
+  }
+  .client-info span {
+    font-size: 14px;
+  }
 
   /* ---------- FOOTER ---------- */
-  .footer{
+  .footer {
     padding: 32px 18px;
   }
-  .footer-bottom{
+  .footer-bottom {
     gap: 12px;
   }
-  .footer-logo img{
+  .footer-logo img {
     height: 52px;
     max-height: 52px;
   }
-  
-   /* Отключаем высокую карточку и центрирование контента */
+
+  /* Отключаем высокую карточку и центрирование контента */
   .box.box-yellow,
-  .box.box-grey{
+  .box.box-grey {
     min-height: unset !important;
     height: auto !important;
 
@@ -604,12 +623,12 @@ body {
 
   /* чтобы текст не давал странные отступы */
   .box.box-yellow p,
-  .box.box-grey p{
+  .box.box-grey p {
     margin: 0;
   }
 
   /* Автор внутри карточки — сразу под текстом */
-  .box .client{
+  .box .client {
     margin-top: 14px !important;
     padding-top: 12px !important;
     width: 100%;
@@ -618,40 +637,54 @@ body {
     align-items: center;
     gap: 12px;
 
-    border-top: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
   }
 
-  .box .client img{
+  .box .client img {
     width: 52px;
     height: 52px;
   }
 
   .box.box-yellow .client-info strong,
-  .box.box-grey .client-info strong{ color:#111; }
+  .box.box-grey .client-info strong {
+    color: #111;
+  }
 
-  .box.box-yellow .client-info span{ color: rgba(0,0,0,0.65); }
-  .box.box-grey  .client-info span{ color: rgba(0,0,0,0.60); }
+  .box.box-yellow .client-info span {
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .box.box-grey .client-info span {
+    color: rgba(0, 0, 0, 0.6);
+  }
 
   /* Старый блок клиентов скрываем, чтобы не было дубликатов/пустот */
-  .clients{ display:none; }
-  
-  
+  .clients {
+    display: none;
+  }
+
   /* 1) Жёстко фиксируем ширину слайдера по экрану */
   .reviews-section,
   .reviews-inner,
-  .reviews-viewport{
+  .reviews-viewport {
     width: 100vw !important;
     max-width: 100vw !important;
     margin: 0 !important;
   }
 
   /* 2) Вьюпорт без боковых паддингов, чтобы 100vw было честным */
-  .reviews-section{ padding-left: 0 !important; padding-right: 0 !important; }
-  .reviews-viewport{ overflow: hidden; }
+  .reviews-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .reviews-viewport {
+    overflow: hidden;
+  }
 
   /* 3) Каждый слайд ровно на ширину экрана */
-  .reviews-track{ width: 100vw !important; }
-  .review-slide{
+  .reviews-track {
+    width: 100vw !important;
+  }
+  .review-slide {
     flex: 0 0 100vw !important;
     width: 100vw !important;
     max-width: 100vw !important;
@@ -660,25 +693,25 @@ body {
   }
 
   /* 4) “Воздух” делаем внутри контента, а не у слайда */
-  .boxes{
+  .boxes {
     width: 100%;
     max-width: 100%;
     padding: 0 16px !important;
     box-sizing: border-box;
   }
 
-  .box{
+  .box {
     width: 100%;
     max-width: 100%;
     min-width: 0 !important;
   }
 
   /* страховка от 1-2px перелива */
-  body{ overflow-x: hidden; }
-  
+  body {
+    overflow-x: hidden;
+  }
 }
 @media (max-width: 480px) {
-
   body {
     padding-top: 100px;
   }
@@ -686,7 +719,7 @@ body {
   .item {
     font-size: 14px;
   }
-  
+
   /* ===== Футер (как был, только оставляем) ===== */
   .footer {
     display: flex;
@@ -775,7 +808,7 @@ body {
   }
 
   .footer-logo img {
-    height: clamp(50px, 10vw, 80px);
+    height: 100px;
     width: auto;
   }
 }
@@ -784,7 +817,6 @@ body {
    901px – 1200px (tablets / iPad / small laptops)
    ========================= */
 @media (min-width: 901px) and (max-width: 1200px) {
-
   /* ===== NAVIGATION ===== */
   body {
     padding-top: 110px;
@@ -794,7 +826,7 @@ body {
     padding: 14px 28px;
     gap: 18px;
     justify-content: flex-end;
-    flex-wrap: nowrap;           /* 🔥 всё в одну строку */
+    flex-wrap: nowrap; /* 🔥 всё в одну строку */
   }
 
   .first {
@@ -832,7 +864,7 @@ body {
   }
 
   .project {
-    flex: 1 1 calc(50% - 24px);   /* 🔥 2 карточки в ряд */
+    flex: 1 1 calc(50% - 24px); /* 🔥 2 карточки в ряд */
     max-width: 520px;
     padding: 22px;
   }
@@ -873,7 +905,7 @@ body {
   }
 
   .box {
-    flex: 1 1 calc(50% - 24px);   /* 🔥 2 отзыва в ряд */
+    flex: 1 1 calc(50% - 24px); /* 🔥 2 отзыва в ряд */
     max-width: 520px;
   }
 
@@ -911,7 +943,6 @@ body {
    1201px – 1366px (HD laptops)
    ========================= */
 @media (min-width: 1201px) and (max-width: 1366px) {
-
   /* ===== BODY ===== */
   body {
     padding-top: 105px;
@@ -955,7 +986,7 @@ body {
   }
 
   .project {
-    flex: 1 1 calc(50% - 30px);  /* 2 карточки в ряд */
+    flex: 1 1 calc(50% - 30px); /* 2 карточки в ряд */
     max-width: 520px;
     padding: 22px;
   }
@@ -992,9 +1023,7 @@ body {
     padding: 0 60px;
   }
 
-
-
-   .boxes {
+  .boxes {
     align-items: stretch; /* 🔥 все боксы одной высоты */
   }
 
@@ -1028,8 +1057,6 @@ body {
     min-width: 0; /* 🔥 чтобы не ломало ширину */
   }
 
-
-
   /* ===== FOOTER ===== */
   .footer {
     padding: 36px 7vw;
@@ -1045,141 +1072,153 @@ body {
    1681px – 2100px (FHD / большие экраны) — более крупный масштаб
    ========================= */
 @media (min-width: 1681px) and (max-width: 2100px) {
-
   /* ===== BODY ===== */
-  body { padding-top: 125px; }
+  body {
+    padding-top: 125px;
+  }
 
   /* ===== NAVIGATION ===== */
-  .nav{
+  .nav {
     padding: 20px 70px;
     gap: 34px;
     flex-wrap: nowrap;
   }
 
-  .lis{ width: 175px; }
+  .lis {
+    width: 175px;
+  }
 
-  .item{
+  .item {
     font-size: 30px;
   }
 
   /* ===== REFERENCES SECTION ===== */
-  .references{
-    max-width: 1500px;            /* шире, чтобы не казалось “узко” */
+  .references {
+    max-width: 1500px; /* шире, чтобы не казалось “узко” */
     margin: 110px auto 80px auto;
     padding: 0 60px;
     gap: 80px;
   }
 
-  .references h1{
-    font-size: 84px;              /* крупнее заголовок */
+  .references h1 {
+    font-size: 84px; /* крупнее заголовок */
     line-height: 1.05;
   }
 
-  .references .intro{
+  .references .intro {
     font-size: 26px;
     max-width: 1100px;
     line-height: 1.7;
   }
 
   /* ===== PROJECTS ===== */
-  .projects{
-    gap: 48px;                    /* больше воздуха */
+  .projects {
+    gap: 48px; /* больше воздуха */
   }
 
-  .project{
-    flex: 1 1 calc(50% - 48px);   /* 🔥 2 большие карточки в ряд (как на HD) */
+  .project {
+    flex: 1 1 calc(50% - 48px); /* 🔥 2 большие карточки в ряд (как на HD) */
     max-width: 680px;
     padding: 34px;
     border-radius: 16px;
   }
 
-  .project h2{ font-size: 38px; }
-  .project p{ font-size: 22px; }
+  .project h2 {
+    font-size: 38px;
+  }
+  .project p {
+    font-size: 22px;
+  }
 
-  .project iframe{
-    height: 320px;                /* видео выглядит “как на твоей второй картинке” */
+  .project iframe {
+    height: 320px; /* видео выглядит “как на твоей второй картинке” */
     border-radius: 12px;
   }
 
-  .more{ font-size: 20px; }
+  .more {
+    font-size: 20px;
+  }
 
   /* ===== REVIEWS ===== */
-  .reviews-section{
+  .reviews-section {
     max-width: 1600px;
     padding: 120px 8vw;
     gap: 80px;
   }
 
-  .reviews-title h2{ font-size: 60px; }
-  .reviews-subtitle{
+  .reviews-title h2 {
+    font-size: 60px;
+  }
+  .reviews-subtitle {
     font-size: 24px;
     max-width: 1100px;
     line-height: 1.7;
   }
 
-  .review-slide{
+  .review-slide {
     gap: 55px;
     padding: 0 6vw;
   }
 
- /* 1) Делаем одинаковую сетку для карточек и авторов */
+  /* 1) Делаем одинаковую сетку для карточек и авторов */
   .boxes,
-  .clients{
-    max-width: 1400px;      /* подгони, если хочешь шире/уже */
+  .clients {
+    max-width: 1400px; /* подгони, если хочешь шире/уже */
     margin: 0 auto;
     width: 100%;
-    gap: 44px;              /* должно совпадать с gap у .boxes */
+    gap: 44px; /* должно совпадать с gap у .boxes */
   }
 
   /* 2) Карточки отзывов */
-  .boxes{
+  .boxes {
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
   }
 
-  .box{
+  .box {
     flex: 1 1 calc(50% - 44px);
     max-width: 720px;
     display: flex;
     flex-direction: column;
   }
 
-  .box-yellow, .box-grey{
+  .box-yellow,
+  .box-grey {
     flex: 1;
   }
 
   /* 3) Авторы — ровно под своими карточками */
-  .clients{
+  .clients {
     display: flex;
-    justify-content: center;   /* 🔥 НЕ space-between */
+    justify-content: center; /* 🔥 НЕ space-between */
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 28px;          /* расстояние от карточек до авторов */
+    margin-top: 28px; /* расстояние от карточек до авторов */
   }
 
-  .client{
+  .client {
     flex: 1 1 calc(50% - 44px);
-    max-width: 720px;          /* 🔥 та же ширина, что и .box */
-    justify-content: center;   /* 🔥 центрируем внутри “своей колонки” */
+    max-width: 720px; /* 🔥 та же ширина, что и .box */
+    justify-content: center; /* 🔥 центрируем внутри “своей колонки” */
     min-width: 0;
   }
 
   /* 4) Убираем твои ручные смещения, если они есть */
   .clients .client:nth-child(1),
-  .clients .client:nth-child(2){
+  .clients .client:nth-child(2) {
     margin-left: 0 !important;
     margin-right: 0 !important;
     order: initial !important;
   }
   /* ===== FOOTER ===== */
-  .footer{
+  .footer {
     padding: 60px 12vw;
     font-size: 18px;
   }
 
-  .footer-logo img{
+  .footer-logo img {
     max-height: 90px;
   }
 }
@@ -1188,7 +1227,6 @@ body {
    2101px – 3000px (2K / large monitors)
    ========================= */
 @media (min-width: 2101px) and (max-width: 3000px) {
-
   /* ===== BODY ===== */
   body {
     padding-top: 135px;
@@ -1350,7 +1388,9 @@ body {
   }
 
   .footer-logo img {
-    max-height: 110px;
+    width: 300px;
+    height: auto;
+    display: block;
   }
 }
 
@@ -1358,105 +1398,117 @@ body {
    3001px+ (4K / 3840x2160) — усиленный масштаб
    ========================= */
 @media (min-width: 3001px) {
-
   /* ===== BODY ===== */
-  body { padding-top: 175px; }
+  body {
+    padding-top: 175px;
+  }
 
   /* ===== NAVIGATION ===== */
-  .nav{
+  .nav {
     padding: 30px 170px;
     gap: 54px;
     flex-wrap: nowrap;
   }
 
-  .lis{ width: 240px; }
+  .lis {
+    width: 240px;
+  }
 
-  .item{
+  .item {
     font-size: 40px;
     letter-spacing: 1px;
   }
 
   /* ===== REFERENCES SECTION ===== */
-  .references{
+  .references {
     max-width: 3200px;
     margin: 140px auto 110px auto;
     padding: 0 170px;
     gap: 120px;
   }
 
-  .references h1{
+  .references h1 {
     font-size: 150px;
     line-height: 1.02;
   }
 
-  .references .intro{
+  .references .intro {
     font-size: 44px;
     max-width: 2200px;
     line-height: 1.85;
   }
 
   /* ===== PROJECTS ===== */
-  .projects{
+  .projects {
     justify-content: center;
     gap: 130px;
   }
 
-  .project{
-    flex: 1 1 calc(50% - 130px);  /* 2 большие карточки */
+  .project {
+    flex: 1 1 calc(50% - 130px); /* 2 большие карточки */
     max-width: 1500px;
     padding: 76px;
     border-radius: 26px;
   }
 
-  .project h2{ font-size: 72px; }
-  .project p{ font-size: 34px; line-height: 1.75; }
+  .project h2 {
+    font-size: 72px;
+  }
+  .project p {
+    font-size: 34px;
+    line-height: 1.75;
+  }
 
-  .project iframe{
+  .project iframe {
     height: 680px;
     border-radius: 18px;
   }
 
-  .more{ font-size: 30px; }
+  .more {
+    font-size: 30px;
+  }
 
   /* ===== REVIEWS ===== */
   /* ===== 4K: большие стрелки ===== */
-.reviews-controls{
-  gap: 40px;
-}
+  .reviews-controls {
+    gap: 40px;
+  }
 
-.reviews-btn{
-  padding: 16px 30px;
-  font-size: 40px;
-  border-radius: 12px;
-  border-width: 3px;
-}
+  .reviews-btn {
+    padding: 16px 30px;
+    font-size: 40px;
+    border-radius: 12px;
+    border-width: 3px;
+  }
 
-.reviews-btn:hover{
-  transform: translateY(-3px);
-}
+  .reviews-btn:hover {
+    transform: translateY(-3px);
+  }
 
-  .reviews-section{
+  .reviews-section {
     max-width: 3200px;
     margin: 0 auto;
     padding: 200px 170px;
     gap: 120px;
   }
 
-  .reviews-title h2{ font-size: 120px; }
+  .reviews-title h2 {
+    font-size: 120px;
+  }
 
-  .reviews-subtitle{
+  .reviews-subtitle {
     font-size: 44px;
     max-width: 2200px;
     line-height: 1.85;
   }
 
-  .review-slide{
+  .review-slide {
     max-width: 3200px;
     margin: 0 auto;
   }
 
   /* ===== REVIEWS GRID ===== */
-  .boxes{
+  .boxes {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -1464,7 +1516,7 @@ body {
     gap: 130px;
   }
 
-  .box{
+  .box {
     flex: 1 1 calc(50% - 130px);
     max-width: 1500px;
     min-height: 520px;
@@ -1473,7 +1525,7 @@ body {
   }
 
   .box-yellow,
-  .box-grey{
+  .box-grey {
     flex: 1;
     padding: 78px 90px;
     font-size: 34px;
@@ -1482,7 +1534,7 @@ body {
   }
 
   /* ===== CLIENTS UNDER REVIEWS ===== */
-  .clients{
+  .clients {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -1490,27 +1542,32 @@ body {
     margin-top: 55px;
   }
 
-  .client{
+  .client {
     flex: 1 1 calc(50% - 130px);
     max-width: 1500px;
     justify-content: center;
     min-width: 0;
   }
 
-  .client img{
+  .client img {
     width: 140px;
     height: 140px;
   }
 
-  .client-info strong{ font-size: 34px; }
-  .client-info span{ font-size: 28px; }
+  .client-info strong {
+    font-size: 34px;
+  }
+  .client-info span {
+    font-size: 28px;
+  }
 
-
-    .reviews-section { width: 100%; }
+  .reviews-section {
+    width: 100%;
+  }
 
   /* 1) Делаем сетку, а не плавающий flex */
   .boxes,
-  .clients{
+  .clients {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 130px !important;
@@ -1521,7 +1578,7 @@ body {
 
   /* 2) Снимаем любые старые ограничения */
   .box,
-  .client{
+  .client {
     max-width: none !important;
     min-width: 0 !important;
     width: 100% !important;
@@ -1529,41 +1586,54 @@ body {
   }
 
   /* 3) Карточки — одинаковые по высоте и крупные */
-  .box{
+  .box {
     min-height: 520px !important;
     display: flex !important;
     flex-direction: column !important;
   }
 
   .box-yellow,
-  .box-grey{
+  .box-grey {
     width: 100% !important;
     flex: 1 !important;
   }
 
   /* 4) Убираем любые ручные смещения nth-child (если были в базе) */
   .clients .client:nth-child(1),
-  .clients .client:nth-child(2){
+  .clients .client:nth-child(2) {
     margin: 0 !important;
     order: initial !important;
   }
   /* ===== FOOTER ===== */
-  .footer{
+  .footer {
     padding: 110px 170px;
     gap: 60px;
     font-size: 26px;
   }
 
-  .footer-column h3{ font-size: 40px; }
+  .footer-column h3 {
+    font-size: 40px;
+  }
 
   .footer-column p,
-  .footer-column a{ font-size: 28px; }
+  .footer-column a {
+    font-size: 28px;
+  }
 
-  .footer-bottom{ font-size: 26px; gap: 34px; }
+  .footer-bottom {
+    font-size: 26px;
+    gap: 34px;
+  }
 
-  .footer-socials a{ font-size: 32px; }
+  .footer-socials a {
+    font-size: 32px;
+  }
 
-  .footer-links a{ font-size: 26px; }
+  .footer-links a {
+    font-size: 26px;
+  }
 
-  .footer-logo img{ max-height: 160px; }
+  .footer-logo img {
+    max-height: 160px;
+  }
 }
