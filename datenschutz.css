@@ -341,11 +341,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.footer-logo img {
-  height: 50px;
-  max-height: 80px;
-  width: auto;
-}
 
 /* ===== ФУТЕР ===== */
 .footer {
@@ -462,7 +457,7 @@ body {
 
 .footer-logo img {
   height: 50px;
-  max-height: 80px;
+
   width: auto;
 }
 

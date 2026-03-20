@@ -343,7 +343,7 @@ body {
 }
 .footer-logo img {
   height: 50px;
-  max-height: 80px;
+  
   width: auto;
 }
 
@@ -460,11 +460,6 @@ body {
   align-items: center;
 }
 
-.footer-logo img {
-  height: 50px;
-  max-height: 80px;
-  width: auto;
-}
 
 /* ===== ХОВЕР ДЛЯ НАВИГАЦИИ ===== */
 .nav a:hover {
