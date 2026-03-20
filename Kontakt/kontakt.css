@@ -72,10 +72,7 @@ body {
   color: #fdc367;
 }
 
-.lis {
-  width: 80%;
-  max-width: 180px;
-}
+
 
 .first {
   margin-right: auto;
@@ -354,7 +351,7 @@ textarea {
 
 .footer-logo img {
   height: 50px;
-  max-height: 80px;
+  
   width: auto;
 }
 
